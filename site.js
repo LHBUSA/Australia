@@ -120,7 +120,8 @@
   if (footerBottom && !document.querySelector('.photo-credit')) {
     const credit = document.createElement('span');
     credit.className = 'photo-credit';
-    credit.innerHTML = 'Photography: <a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Sydney_Harbour.jpg" target="_blank" rel="noopener">Sydney Harbour — Andy / CC BY-SA 2.0</a> · Brisbane aerials via Wikimedia Commons';
+    credit.style.cssText = 'display:block;padding:0 0 22px;font:6px/1.6 "DM Mono",monospace;letter-spacing:.04em;color:#506b7c;text-align:center';
+    credit.innerHTML = 'Photography: <a style="color:#6f899d" href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Sydney_Harbour.jpg" target="_blank" rel="noopener">Sydney Harbour — Andy / CC BY-SA 2.0</a> · Brisbane aerials via Wikimedia Commons';
     footerBottom.insertAdjacentElement('afterend', credit);
   }
 })();
