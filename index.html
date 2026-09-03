@@ -3,32 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Australia Property Data API — National Address, Parcel & Property Intelligence | PropData</title>
-  <meta name="description" content="Build on Australia's expanding source-native property graph with Queensland parcels and addresses live now, national G-NAF rolling out, and NSW, Victoria and additional state property layers following through one PropData API contract.">
+  <title>PropData Australia | Property Intelligence API · Addresses, Parcels & National Coverage</title>
+  <meta name="description" content="PropData Australia is source-aware property intelligence infrastructure for Australian real estate. Queensland parcels and addresses are live, national G-NAF is expanding, and NSW, Victoria and additional state layers are following through one REST, MCP and bulk contract.">
   <meta name="author" content="PropTechUSA.ai">
   <meta name="application-name" content="PropData Australia">
-  <meta name="theme-color" content="#041225">
+  <meta name="theme-color" content="#04111f">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="canonical" href="https://au.proptechusa.ai/">
   <link rel="alternate" hreflang="en-AU" href="https://au.proptechusa.ai/">
   <link rel="alternate" hreflang="x-default" href="https://au.proptechusa.ai/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="mask-icon" href="/favicon.svg" color="#20d080">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
   <link rel="stylesheet" href="/site.css">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PropData Australia">
   <meta property="og:title" content="Australia's property intelligence infrastructure. One API.">
-  <meta property="og:description" content="Queensland live. National G-NAF rolling out. NSW, Victoria and additional state property layers following through one source-aware property contract.">
+  <meta property="og:description" content="Queensland live. National G-NAF expanding. NSW, Victoria and the rest of Australia rolling into one source-aware property graph.">
   <meta property="og:url" content="https://au.proptechusa.ai/">
   <meta property="og:locale" content="en_AU">
-  <meta property="og:image" content="https://au.proptechusa.ai/assets/australia-network.svg">
-  <meta property="og:image:alt" content="PropData Australia national property graph rollout">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1772326281137-b617cbf77c5f?auto=format&fit=crop&w=1200&h=630&q=90">
+  <meta property="og:image:secure_url" content="https://images.unsplash.com/photo-1772326281137-b617cbf77c5f?auto=format&fit=crop&w=1200&h=630&q=90">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Aerial view of Australian residential property and urban infrastructure — PropData Australia">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Australia's property intelligence infrastructure. One API.">
-  <meta name="twitter:description" content="Source-native Australian property intelligence with Queensland live and national coverage expanding now.">
-  <meta name="twitter:image" content="https://au.proptechusa.ai/assets/australia-network.svg">
+  <meta name="twitter:description" content="Source-native Australian property intelligence. Live Queensland foundation, national expansion, REST, MCP and bulk delivery.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1772326281137-b617cbf77c5f?auto=format&fit=crop&w=1200&h=630&q=90">
+  <meta name="twitter:image:alt" content="PropData Australia property intelligence">
 
   <script type="application/ld+json">
   {
@@ -40,7 +51,15 @@
         "name":"PropTechUSA.ai",
         "url":"https://proptechusa.ai/",
         "logo":{"@type":"ImageObject","url":"https://au.proptechusa.ai/favicon.svg"},
-        "sameAs":["https://propdata.proptechusa.ai/","https://global.proptechusa.ai/","https://data.proptechusa.ai/"]
+        "email":"sales@proptechusa.ai",
+        "telephone":"+1-888-784-3881",
+        "sameAs":[
+          "https://propdata.proptechusa.ai/",
+          "https://global.proptechusa.ai/",
+          "https://data.proptechusa.ai/",
+          "https://nz.proptechusa.ai/",
+          "https://ee.proptechusa.ai/"
+        ]
       },
       {
         "@type":"WebSite",
@@ -51,7 +70,17 @@
         "inLanguage":"en-AU"
       },
       {
-        "@type":"SoftwareApplication",
+        "@type":"WebPage",
+        "@id":"https://au.proptechusa.ai/#webpage",
+        "url":"https://au.proptechusa.ai/",
+        "name":"PropData Australia | Property Intelligence API",
+        "isPartOf":{"@id":"https://au.proptechusa.ai/#website"},
+        "about":{"@id":"https://au.proptechusa.ai/#product"},
+        "primaryImageOfPage":{"@type":"ImageObject","url":"https://images.unsplash.com/photo-1772326281137-b617cbf77c5f?auto=format&fit=crop&w=1200&h=630&q=90"},
+        "inLanguage":"en-AU"
+      },
+      {
+        "@type":["SoftwareApplication","Product"],
         "@id":"https://au.proptechusa.ai/#product",
         "name":"PropData Australia Property Intelligence API",
         "url":"https://au.proptechusa.ai/",
@@ -59,18 +88,29 @@
         "applicationSubCategory":"Property data API",
         "operatingSystem":"Web API",
         "isAccessibleForFree":false,
+        "brand":{"@id":"https://proptechusa.ai/#organization"},
         "provider":{"@id":"https://proptechusa.ai/#organization"},
         "areaServed":{"@type":"Country","name":"Australia"},
-        "description":"Australia property intelligence infrastructure with live Queensland parcel and address baselines, national G-NAF expansion, and additional state cadastral, valuation and transaction layers rolling into one governed developer contract.",
-        "featureList":["Australian address resolution","Parcel identity and geometry","Source provenance","State-aware property models","National G-NAF rollout","REST and MCP delivery","Bulk and enterprise delivery"],
+        "image":"https://images.unsplash.com/photo-1772326281137-b617cbf77c5f?auto=format&fit=crop&w=1200&h=630&q=90",
+        "description":"Source-aware Australian property intelligence infrastructure with live Queensland address and parcel foundations, national G-NAF expansion and state-specific property layers delivered through one governed developer contract.",
+        "featureList":[
+          "Australian address resolution",
+          "Parcel identity and geometry",
+          "State-native source provenance",
+          "National G-NAF expansion",
+          "REST API delivery",
+          "MCP and AI-native delivery",
+          "Bulk and enterprise delivery"
+        ],
         "offers":[
-          {"@type":"Offer","name":"Developer","price":"149","priceCurrency":"AUD","availability":"https://schema.org/InStock"},
-          {"@type":"Offer","name":"Builder","price":"449","priceCurrency":"AUD","availability":"https://schema.org/InStock"},
-          {"@type":"Offer","name":"Scale","price":"1199","priceCurrency":"AUD","availability":"https://schema.org/InStock"}
+          {"@type":"Offer","name":"Developer","price":"149","priceCurrency":"AUD","url":"https://buy.stripe.com/eVqcN53A256e6xD9ID7wA0d","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"149","priceCurrency":"AUD","billingDuration":"P1M"}},
+          {"@type":"Offer","name":"Builder","price":"449","priceCurrency":"AUD","url":"https://buy.stripe.com/14A6oH9Yq6ai7BH0837wA0e","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"449","priceCurrency":"AUD","billingDuration":"P1M"}},
+          {"@type":"Offer","name":"Scale","price":"1199","priceCurrency":"AUD","url":"https://buy.stripe.com/28E5kD9YqgOWg8d9ID7wA0f","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"1199","priceCurrency":"AUD","billingDuration":"P1M"}}
         ]
       },
       {
         "@type":"BreadcrumbList",
+        "@id":"https://au.proptechusa.ai/#breadcrumbs",
         "itemListElement":[
           {"@type":"ListItem","position":1,"name":"PropTechUSA.ai","item":"https://proptechusa.ai/"},
           {"@type":"ListItem","position":2,"name":"PropData","item":"https://propdata.proptechusa.ai/"},
@@ -79,10 +119,11 @@
       },
       {
         "@type":"FAQPage",
+        "@id":"https://au.proptechusa.ai/#faq",
         "mainEntity":[
-          {"@type":"Question","name":"Is PropData Australia live?","acceptedAnswer":{"@type":"Answer","text":"Yes. Queensland parcel and address foundations are live today. National G-NAF address coverage and additional state property layers are rolling into the same PropData contract."}},
-          {"@type":"Question","name":"What currency is Australia pricing in?","acceptedAnswer":{"@type":"Answer","text":"Self-serve Australia plans are priced in Australian dollars (AUD)."}},
-          {"@type":"Question","name":"Does PropData flatten Australian states into a US-style schema?","acceptedAnswer":{"@type":"Answer","text":"No. PropData preserves source-native state identifiers, jurisdiction semantics and provenance while normalizing delivery through a stable country-aware API contract."}}
+          {"@type":"Question","name":"Is PropData Australia available now?","acceptedAnswer":{"@type":"Answer","text":"Yes. Queensland parcel and address foundations are live while national G-NAF and additional state property layers continue expanding through the same Australia contract."}},
+          {"@type":"Question","name":"Can I subscribe to PropData Australia online?","acceptedAnswer":{"@type":"Answer","text":"Yes. Developer, Builder and Scale plans use secure Stripe subscription checkout in Australian dollars."}},
+          {"@type":"Question","name":"Does PropData force Australian property data into a US schema?","acceptedAnswer":{"@type":"Answer","text":"No. PropData preserves state-native identifiers, jurisdiction semantics, source revision and provenance while normalising delivery through a stable country-aware API contract."}}
         ]
       }
     ]
@@ -90,322 +131,187 @@
   </script>
 </head>
 <body>
-  <header class="site-header">
+  <div class="launch-strip">
+    <div class="shell launch-strip-inner">
+      <span><i></i> AUSTRALIA IS LIVE &amp; EXPANDING</span>
+      <span class="launch-flow">Queensland foundation live <b>•</b> National G-NAF expanding <b>•</b> NSW, Victoria &amp; more next</span>
+      <a href="#coverage">View rollout →</a>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
     <div class="shell nav">
       <a class="brand" href="#top" aria-label="PropData Australia home">
-        <img src="/favicon.svg" alt="" width="38" height="38">
-        <span class="brand-copy"><strong>PROPDATA</strong><small>AUSTRALIA</small></span>
+        <img src="/favicon.svg" alt="" width="42" height="42">
+        <span class="brand-copy"><strong>PropData</strong><small>AUSTRALIA · BY PROPTECHUSA.AI</small></span>
       </a>
-
       <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
-
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <a href="#product">Product</a>
         <a href="#coverage">Coverage</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#pricing">Pricing</a>
         <a href="/docs.html">Developers</a>
+        <a href="#pricing">Pricing</a>
+        <details class="network-menu countries-menu">
+          <summary>Countries</summary>
+          <div class="network-popover countries-popover">
+            <a href="https://propdata.proptechusa.ai/"><span class="country-flag">🇺🇸</span><span><strong>United States</strong><small>166M+ parcel records</small></span></a>
+            <a href="https://nz.proptechusa.ai/"><span class="country-flag">🇳🇿</span><span><strong>New Zealand</strong><small>National parcel · title · building graph</small></span></a>
+            <a href="https://ee.proptechusa.ai/"><span class="country-flag">🇪🇪</span><span><strong>Estonia</strong><small>Cadastral · ADS · building intelligence</small></span></a>
+            <a href="https://gb.proptechusa.ai/"><span class="country-flag">🇬🇧</span><span><strong>Great Britain</strong><small>UPRN · HMLR property infrastructure</small></span></a>
+            <a class="active-country" href="https://au.proptechusa.ai/"><span class="country-flag">🇦🇺</span><span><strong>Australia</strong><small>Live &amp; expanding</small></span></a>
+          </div>
+        </details>
         <details class="network-menu">
           <summary>Network</summary>
           <div class="network-popover">
             <a href="https://proptechusa.ai/"><strong>PropTechUSA.ai</strong><small>Company</small></a>
-            <a href="https://propdata.proptechusa.ai/"><strong>PropData</strong><small>Global property API</small></a>
-            <a href="https://global.proptechusa.ai/"><strong>Global</strong><small>International coverage</small></a>
-            <a href="https://data.proptechusa.ai/"><strong>Data</strong><small>Data solutions</small></a>
+            <a href="https://propdata.proptechusa.ai/"><strong>PropData</strong><small>Global property intelligence API</small></a>
+            <a href="https://global.proptechusa.ai/"><strong>Global Coverage</strong><small>Country-by-country buildout</small></a>
+            <a href="https://data.proptechusa.ai/"><strong>Data Solutions</strong><small>Bulk · custom · enterprise</small></a>
           </div>
         </details>
       </nav>
-
       <div class="nav-actions">
-        <span class="nav-pill">● AU PRODUCT LIVE</span>
-        <a class="nav-cta" href="#pricing">Get API access</a>
+        <a class="nav-docs" href="/docs.html">&lt;/&gt; Docs</a>
+        <a class="nav-cta" href="#pricing">Get API Access</a>
       </div>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="shell">
-        <div class="hero-grid">
-          <div class="hero-copy reveal visible">
-            <div class="launch-pill"><i></i> AUSTRALIA · LIVE & EXPANDING</div>
-            <h1>Australia's property<br><em>intelligence layer.</em></h1>
-            <p>One source-aware developer contract for Australian property identity. Queensland parcels and addresses are live now. National G-NAF is rolling in. NSW, Victoria and additional state property layers follow without forcing Australia into a foreign data model.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#pricing">Start from A$149 / month <span>→</span></a>
-              <a class="btn btn-dark" href="#coverage">Explore live coverage</a>
-            </div>
-            <div class="hero-note">
-              <span><i></i> SOURCE-NATIVE</span>
-              <span><i></i> COUNTRY-AWARE</span>
-              <span><i></i> FAIL-CLOSED</span>
-              <span><i></i> REST · MCP · BULK</span>
-            </div>
-            <div id="success" class="success-banner" role="status">Subscription received. We are provisioning your PropData Australia access under the selected plan.</div>
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1772326281137-b617cbf77c5f?auto=format&fit=crop&w=2400&q=90" alt="Aerial view of a modern Australian residential neighbourhood" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="shell hero-inner">
+        <div class="hero-copy reveal visible">
+          <div class="eyebrow live-eyebrow"><span></span> AUSTRALIA PROPERTY INTELLIGENCE</div>
+          <h1>Australia's property<br><em>intelligence infrastructure.</em><br><b>One API.</b></h1>
+          <p>Authoritative property identity, address, parcel and geospatial context connected into one source-aware Australian property graph. Live today in Queensland. Expanding nationally while you build.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pricing">View pricing &amp; get access <span>→</span></a>
+            <a class="btn btn-glass" href="/docs.html">Explore documentation</a>
           </div>
-
-          <div class="hero-visual reveal visible">
-            <img src="/assets/australia-network.svg" alt="Australia property graph showing Queensland live and national expansion">
-            <div class="hero-float float-a"><b>2.84M+</b><span>QLD ADDRESSES · LIVE</span></div>
-            <div class="hero-float float-b"><b>15.9M+</b><span>NATIONAL G-NAF SCALE · ROLLING IN</span></div>
+          <div class="hero-proof">
+            <span>✓ Local AUD billing</span><span>✓ Secure Stripe checkout</span><span>✓ REST · MCP · Bulk</span><span>✓ Source provenance</span>
           </div>
         </div>
-
-        <div class="hero-metrics reveal visible" aria-label="Australia product metrics">
-          <div><b>2.16M+</b><span>Queensland parcels live</span></div>
-          <div><b>2.84M+</b><span>Queensland addresses live</span></div>
-          <div><b>15.9M+</b><span>National address rollout scale</span></div>
-          <div><b>8</b><span>States & territories in architecture</span></div>
-        </div>
+        <aside class="live-board reveal visible" aria-label="Australia live product metrics">
+          <div class="live-board-head"><span><i></i> LIVE NOW IN AUSTRALIA</span><small>Source-aware · continually expanding</small></div>
+          <div class="metric-grid">
+            <div><b>2.84M+</b><span>Queensland addresses</span><small>QAMF · baseline complete</small></div>
+            <div><b>2.15M+</b><span>Queensland parcels</span><small>QSCF · baseline complete</small></div>
+            <div><b>15.9M+</b><span>National G-NAF scale</span><small>National expansion</small></div>
+            <div><b>8</b><span>Jurisdictions</span><small>One Australia contract</small></div>
+          </div>
+          <a href="#coverage">Explore the national rollout →</a>
+        </aside>
       </div>
     </section>
 
-    <section class="source-ribbon" aria-label="Source provenance">
-      <div class="shell source-ribbon-inner">
-        <div class="source-seal">AU</div>
-        <div class="source-copy">
-          <strong>Built from Australian government and official geospatial source systems.</strong>
-          <span>Queensland QSCF + QAMF live · Commonwealth G-NAF national rollout · state-specific property layers expanding</span>
-        </div>
-        <div class="source-right"><b>PROVENANCE PRESERVED</b><br>Original identifiers · state context · source revision · fetch lineage</div>
+    <section class="trust-bar">
+      <div class="shell trust-grid">
+        <div><span class="trust-icon">◎</span><span><strong>Source-native</strong><small>Government and official source systems</small></span></div>
+        <div><span class="trust-icon">◇</span><span><strong>Property identity first</strong><small>Address → parcel → property relationships</small></span></div>
+        <div><span class="trust-icon">ϟ</span><span><strong>Developer-first</strong><small>REST · MCP · bulk · custom delivery</small></span></div>
+        <div><span class="trust-icon">✓</span><span><strong>Fail-closed</strong><small>Unknown stays unknown — provenance preserved</small></span></div>
       </div>
     </section>
 
-    <section id="product" class="section thesis">
-      <div class="shell thesis-grid">
-        <div class="thesis-copy reveal">
-          <div class="eyebrow">THE AUSTRALIA THESIS</div>
+    <section id="product" class="section product-section">
+      <div class="shell split-grid">
+        <div class="copy-block reveal">
+          <div class="eyebrow">BUILT FOR AUSTRALIA</div>
           <h2>One country. Eight jurisdictions. No fake uniformity.</h2>
-          <p>Australia's property systems are distributed across Commonwealth, state and territory sources. PropData does not erase those differences. We resolve them into a stable property contract while preserving the native identifiers and provenance developers need to trust the answer.</p>
-          <a class="btn btn-dark" href="/docs.html">Read developer docs <span>↗</span></a>
+          <p>Australian property data is distributed across Commonwealth, state and territory systems. PropData resolves those sources into one production contract without stripping away the identifiers, jurisdiction logic and provenance that make the underlying records trustworthy.</p>
+          <div class="feature-stack">
+            <article><span>01</span><div><h3>Resolve the native identity.</h3><p>Address, coordinates and state-native parcel identifiers resolve before enrichment begins.</p></div></article>
+            <article><span>02</span><div><h3>Preserve the evidence.</h3><p>Source dataset, revision, record ID and jurisdiction context stay attached to the property response.</p></div></article>
+            <article><span>03</span><div><h3>Deepen without breaking your integration.</h3><p>As national and state layers arrive, your application keeps calling the same country-aware contract.</p></div></article>
+          </div>
         </div>
-
-        <div class="principles">
-          <article class="principle reveal"><div class="number">01 · RESOLVE</div><h3>Start with the actual property identity.</h3><p>Address, coordinates, state-native parcel identifiers and future national crosswalks resolve into explicit Australian property context before enrichment begins.</p><code>country=AU · jurisdiction=QLD</code></article>
-          <article class="principle reveal"><div class="number">02 · PRESERVE</div><h3>Keep the source-native record intact.</h3><p>Queensland QSCF identifiers stay Queensland QSCF identifiers. G-NAF address PIDs remain traceable. Each state can keep the semantics that make its records authoritative.</p><code>source_record_id · source_revision · jurisdiction_path</code></article>
-          <article class="principle reveal"><div class="number">03 · CONNECT</div><h3>Build relationships instead of stacking rows.</h3><p>As each jurisdiction arrives, PropData links addresses, parcels, property objects, valuations, transactions, buildings and future public-record layers into one governed graph.</p><code>address → parcel → property → event</code></article>
-          <article class="principle reveal"><div class="number">04 · FAIL CLOSED</div><h3>Unknown remains unknown.</h3><p>If a field is unavailable or a cross-state relationship is not deterministic, PropData returns null or explicit coverage status rather than inventing a property fact.</p><code>coverage_status · match_level · provenance</code></article>
+        <div class="photo-stack reveal">
+          <figure class="photo-large"><img src="https://images.unsplash.com/photo-1772325482422-55bc8dd65662?auto=format&fit=crop&w=1600&q=88" alt="Australian residential property development from above" loading="lazy"><figcaption><b>PROPERTY IS PHYSICAL.</b><span>Our data model starts with real-world identity and geography — not a vendor spreadsheet.</span></figcaption></figure>
+          <div class="photo-stat"><b>AU</b><span>COUNTRY-AWARE CONTRACT</span><small>State-native IDs · geometry · provenance · coverage status</small></div>
         </div>
       </div>
     </section>
 
-    <section id="coverage" class="section coverage">
+    <section id="coverage" class="section coverage-section">
       <div class="shell">
-        <div class="section-head reveal">
-          <div class="eyebrow">NATIONAL BUILDOUT</div>
-          <h2>Australia is becoming a graph, state by state.</h2>
-          <p>The commercial product launches before the ingestion program stops moving. That is intentional. The live foundation is usable today, and every additional jurisdiction expands the same country contract rather than creating another disconnected API.</p>
+        <div class="section-head reveal"><div class="eyebrow">NATIONAL COVERAGE · STATE BY STATE</div><h2>Build now. Inherit the expanding graph.</h2><p>Queensland is the live foundation. National G-NAF is the address spine. NSW and Victoria add valuation, transaction and cadastral depth next, with the remaining jurisdictions already inside the Australia architecture.</p></div>
+        <div class="state-strip reveal" role="tablist" aria-label="Australia coverage roadmap">
+          <button class="state-tab active" data-state-tab="QLD" role="tab" aria-selected="true"><b>QLD</b><span>LIVE</span></button>
+          <button class="state-tab" data-state-tab="NAT" role="tab" aria-selected="false"><b>AU</b><span>G-NAF</span></button>
+          <button class="state-tab" data-state-tab="NSW" role="tab" aria-selected="false"><b>NSW</b><span>NEXT</span></button>
+          <button class="state-tab" data-state-tab="VIC" role="tab" aria-selected="false"><b>VIC</b><span>NEXT</span></button>
+          <button class="state-tab" data-state-tab="REST" role="tab" aria-selected="false"><b>WA · SA · TAS · ACT · NT</b><span>EXPANDING</span></button>
         </div>
-
-        <div class="coverage-layout">
-          <div class="state-list reveal" role="tablist" aria-label="Australian coverage">
-            <button class="state-tab active" type="button" role="tab" aria-selected="true" data-state-tab="QLD"><span class="state-code">QLD</span><span><strong>Queensland</strong><small>Parcel + address foundation</small></span><span class="state-badge">LIVE</span></button>
-            <button class="state-tab" type="button" role="tab" aria-selected="false" data-state-tab="NAT"><span class="state-code">AU</span><span><strong>National G-NAF</strong><small>Geocoded address spine</small></span><span class="state-badge">ROLLING IN</span></button>
-            <button class="state-tab" type="button" role="tab" aria-selected="false" data-state-tab="NSW"><span class="state-code">NSW</span><span><strong>New South Wales</strong><small>Valuation + sales + cadastre</small></span><span class="state-badge">NEXT</span></button>
-            <button class="state-tab" type="button" role="tab" aria-selected="false" data-state-tab="VIC"><span class="state-code">VIC</span><span><strong>Victoria</strong><small>Vicmap property foundation</small></span><span class="state-badge">NEXT</span></button>
-            <button class="state-tab" type="button" role="tab" aria-selected="false" data-state-tab="REST"><span class="state-code">AU+</span><span><strong>Remaining jurisdictions</strong><small>SA · TAS · WA · ACT · NT</small></span><span class="state-badge">QUEUED</span></button>
-          </div>
-
-          <div class="reveal">
-            <article class="state-panel" data-state-panel="QLD">
-              <div class="panel-top"><div><div class="panel-status">● BASELINE COMPLETE</div><h3>Queensland</h3></div><span class="state-code">01</span></div>
-              <p>The first production Australian state foundation is already loaded into PropData's global address and parcel spines, giving the Australia product a real live base while national expansion continues.</p>
-              <div class="coverage-stats"><div class="coverage-stat"><b>2,156,480</b><span>QSCF lot parcels loaded</span></div><div class="coverage-stat"><b>2,839,860</b><span>QAMF addresses loaded</span></div></div>
-              <div class="dataset-list">
-                <div class="dataset-row"><div><strong>Queensland Spatial Cadastral Fabric</strong><span>QSCF lot parcels · parcel identity</span></div><b>LIVE</b></div>
-                <div class="dataset-row"><div><strong>Queensland Address Management Framework</strong><span>QAMF · geocoded address identity</span></div><b>LIVE</b></div>
-                <div class="dataset-row"><div><strong>Refresh posture</strong><span>Baseline complete · nightly refresh architecture</span></div><b>ACTIVE</b></div>
-              </div>
-            </article>
-
-            <article class="state-panel" data-state-panel="NAT" hidden>
-              <div class="panel-top"><div><div class="panel-status">● NATIONAL INGEST PROGRAM</div><h3>G-NAF</h3></div><span class="state-code">AU</span></div>
-              <p>The Geocoded National Address File is the national address spine for the next phase: a resumable state-by-state loader normalising authoritative address identity into PropData while retaining native PIDs and geocodes.</p>
-              <div class="coverage-stats"><div class="coverage-stat"><b>15.9M+</b><span>Expected national address scale</span></div><div class="coverage-stat"><b>9</b><span>Loader partitions including offshore territories</span></div></div>
-              <div class="dataset-list">
-                <div class="dataset-row"><div><strong>National address identity</strong><span>G-NAF Core · GDA2020</span></div><b>ROLLING IN</b></div>
-                <div class="dataset-row"><div><strong>Geocode validation</strong><span>Address-level longitude + latitude</span></div><b>BUILT</b></div>
-                <div class="dataset-row"><div><strong>Resume architecture</strong><span>ACT · NSW · NT · OT · QLD · SA · TAS · VIC · WA</span></div><b>READY</b></div>
-              </div>
-            </article>
-
-            <article class="state-panel" data-state-panel="NSW" hidden>
-              <div class="panel-top"><div><div class="panel-status">● FAST FOLLOW</div><h3>New South Wales</h3></div><span class="state-code">02</span></div>
-              <p>NSW adds something materially different from a basic parcel layer: statutory land values and historical property sales keyed by native property identifiers, with spatial cadastre planned alongside them.</p>
-              <div class="coverage-stats"><div class="coverage-stat"><b>~2.6M</b><span>Property-scale land value foundation</span></div><div class="coverage-stat"><b>1990+</b><span>Historical sales coverage available</span></div></div>
-              <div class="dataset-list">
-                <div class="dataset-row"><div><strong>Valuer General NSW</strong><span>Bulk Land Values</span></div><b>NEXT</b></div>
-                <div class="dataset-row"><div><strong>Property Sales Information</strong><span>PSI · transaction history</span></div><b>NEXT</b></div>
-                <div class="dataset-row"><div><strong>NSW spatial cadastre</strong><span>Parcel geometry crosswalk</span></div><b>PLANNED</b></div>
-              </div>
-            </article>
-
-            <article class="state-panel" data-state-panel="VIC" hidden>
-              <div class="panel-top"><div><div class="panel-status">● FAST FOLLOW</div><h3>Victoria</h3></div><span class="state-code">03</span></div>
-              <p>Vicmap Property is the authoritative cadastral/property foundation for Victoria and provides a deterministic path through SPI, property records and future address relationships.</p>
-              <div class="coverage-stats"><div class="coverage-stat"><b>STATEWIDE</b><span>Victoria cadastral coverage</span></div><div class="coverage-stat"><b>SPI</b><span>Native Standard Parcel Identifier</span></div></div>
-              <div class="dataset-list">
-                <div class="dataset-row"><div><strong>Vicmap Property</strong><span>Parcels · properties · easements · road casements</span></div><b>NEXT</b></div>
-                <div class="dataset-row"><div><strong>Vicmap Address crosswalk</strong><span>Property ↔ address relationships</span></div><b>PLANNED</b></div>
-                <div class="dataset-row"><div><strong>Geometry</strong><span>Parcel/property polygons</span></div><b>AVAILABLE</b></div>
-              </div>
-            </article>
-
-            <article class="state-panel" data-state-panel="REST" hidden>
-              <div class="panel-top"><div><div class="panel-status">● EXPANSION QUEUE</div><h3>Remaining Australia</h3></div><span class="state-code">04+</span></div>
-              <p>South Australia, Tasmania, Western Australia, the ACT and Northern Territory are already inside the Australia architecture. Each comes in through its own authoritative sources and lands in the same country-aware contract.</p>
-              <div class="coverage-stats"><div class="coverage-stat"><b>5</b><span>Additional state/territory cadastral programs</span></div><div class="coverage-stat"><b>1</b><span>Country contract across all jurisdictions</span></div></div>
-              <div class="dataset-list">
-                <div class="dataset-row"><div><strong>SA · TAS · WA</strong><span>State cadastral/property foundations</span></div><b>QUEUED</b></div>
-                <div class="dataset-row"><div><strong>ACT · NT</strong><span>Territory parcel and address sources</span></div><b>QUEUED</b></div>
-                <div class="dataset-row"><div><strong>National relationships</strong><span>Cross-source identity without flattening provenance</span></div><b>ARCHITECTED</b></div>
-              </div>
-            </article>
-          </div>
+        <div class="coverage-panels reveal">
+          <article class="state-panel active" data-state-panel="QLD"><div class="panel-photo"><img src="https://images.unsplash.com/photo-1772325652571-f1406f80ee01?auto=format&fit=crop&w=1400&q=88" alt="Established Australian residential neighbourhood" loading="lazy"><div class="panel-badge">● BASELINE COMPLETE</div></div><div class="panel-copy"><div class="panel-kicker">QUEENSLAND</div><h3>The production foundation is already here.</h3><p>Queensland QSCF parcel identity and QAMF address records are loaded into PropData's global property spines, giving Australian applications a live base while the national program keeps moving.</p><div class="panel-stats"><div><b>2,156,480</b><span>lot parcels loaded</span></div><div><b>2,839,860</b><span>addresses loaded</span></div><div><b>Nightly</b><span>refresh architecture</span></div></div></div></article>
+          <article class="state-panel" data-state-panel="NAT" hidden><div class="panel-copy full"><div class="panel-kicker">NATIONAL G-NAF</div><h3>Australia's national address spine.</h3><p>G-NAF provides national geocoded address identity. PropData's resumable loader is designed across ACT, NSW, NT, offshore territories, QLD, SA, TAS, VIC and WA while retaining native address PIDs and geocodes.</p><div class="panel-stats"><div><b>15.9M+</b><span>expected national scale</span></div><div><b>9</b><span>loader partitions</span></div><div><b>GDA2020</b><span>national geocode datum</span></div></div></div></article>
+          <article class="state-panel" data-state-panel="NSW" hidden><div class="panel-copy full"><div class="panel-kicker">NEW SOUTH WALES</div><h3>Valuation and sales intelligence deepen the graph.</h3><p>NSW adds statutory land values and historical Property Sales Information keyed by native property identifiers, with spatial cadastre integration alongside them.</p><div class="panel-stats"><div><b>~2.6M</b><span>land-value property scale</span></div><div><b>1990+</b><span>sales history available</span></div><div><b>prop_id</b><span>deterministic source key</span></div></div></div></article>
+          <article class="state-panel" data-state-panel="VIC" hidden><div class="panel-copy full"><div class="panel-kicker">VICTORIA</div><h3>Vicmap Property creates the Victorian cadastral foundation.</h3><p>Statewide parcels, properties, easements and road casements provide a deterministic path through SPI and future address relationships while preserving State of Victoria provenance.</p><div class="panel-stats"><div><b>Statewide</b><span>Vicmap coverage</span></div><div><b>SPI</b><span>native parcel identifier</span></div><div><b>Geometry</b><span>parcel/property polygons</span></div></div></div></article>
+          <article class="state-panel" data-state-panel="REST" hidden><div class="panel-copy full"><div class="panel-kicker">THE REST OF AUSTRALIA</div><h3>One contract as each jurisdiction comes online.</h3><p>Western Australia, South Australia, Tasmania, the ACT and Northern Territory land through their own official source systems while keeping the same PropData country contract at the application layer.</p><div class="panel-stats"><div><b>5</b><span>additional jurisdictions</span></div><div><b>1</b><span>country contract</span></div><div><b>Source-native</b><span>provenance preserved</span></div></div></div></article>
         </div>
       </div>
     </section>
 
-    <section id="architecture" class="section graph">
-      <div class="shell">
-        <div class="section-head reveal">
-          <div class="eyebrow">PROPERTY GRAPH</div>
-          <h2>Australia is not a CSV download anymore.</h2>
-          <p>PropData turns separate source systems into explicit property relationships. The result is infrastructure that can answer what a property is, where it is, which jurisdiction produced the fact, and how that fact connects to the next layer.</p>
-        </div>
-
-        <div class="graph-grid">
-          <div class="graph-card reveal"><img src="/assets/australia-network.svg" alt="Australia property graph architecture"></div>
-          <div class="contract-card reveal">
-            <div class="eyebrow">COUNTRY-AWARE CONTRACT</div>
-            <h3>One response. Native Australian context.</h3>
-            <p>The contract remains stable while the underlying source depth expands.</p>
-            <div class="code-window">
-              <div class="code-head"><span>GET /v1/property?country=AU</span><span class="code-dots"><i></i><i></i><i></i></span></div>
-              <div class="code-body"><span class="k">{</span>
-  <span class="s">"country"</span>: <span class="v">"AU"</span>,
-  <span class="s">"jurisdiction"</span>: <span class="v">"QLD"</span>,
-  <span class="s">"match_level"</span>: <span class="v">"source_native"</span>,
-  <span class="s">"coverage_status"</span>: <span class="v">"live"</span>,
-  <span class="s">"property"</span>: <span class="k">{</span>
-    <span class="s">"address_id"</span>: <span class="v">"…"</span>,
-    <span class="s">"parcel_id"</span>: <span class="v">"…"</span>,
-    <span class="s">"geometry"</span>: <span class="v">"available"</span>
-  <span class="k">}</span>,
-  <span class="s">"provenance"</span>: <span class="k">{</span>
-    <span class="s">"source"</span>: <span class="v">"QSCF / QAMF"</span>,
-    <span class="s">"source_revision"</span>: <span class="v">"2026-08"</span>
-  <span class="k">}</span>
-<span class="k">}</span></div>
-            </div>
-            <div class="contract-points">
-              <div class="contract-point"><i>✓</i><span>State-native identifiers stay traceable all the way to the response.</span></div>
-              <div class="contract-point"><i>✓</i><span>Coverage status separates live facts from expanding layers.</span></div>
-              <div class="contract-point"><i>✓</i><span>No inferred property fact is promoted as an authoritative source record.</span></div>
-            </div>
-          </div>
-        </div>
+    <section class="section contract-section">
+      <div class="shell contract-grid">
+        <div class="code-window reveal"><div class="code-head"><span>GET /v1/property?country=AU</span><span><i></i><i></i><i></i></span></div><pre>{
+  <em>"country"</em>: <b>"AU"</b>,
+  <em>"jurisdiction"</em>: <b>"QLD"</b>,
+  <em>"match_level"</em>: <b>"source_native"</b>,
+  <em>"coverage_status"</em>: <b>"live"</b>,
+  <em>"property"</em>: {
+    <em>"address_id"</em>: <b>"…"</b>,
+    <em>"parcel_id"</em>: <b>"…"</b>,
+    <em>"geometry"</em>: <b>"available"</b>
+  },
+  <em>"provenance"</em>: {
+    <em>"source"</em>: <b>"QSCF / QAMF"</b>,
+    <em>"source_revision"</em>: <b>"2026-08"</b>
+  }
+}</pre></div>
+        <div class="copy-block reveal"><div class="eyebrow">ONE GOVERNED PROPERTY CONTRACT</div><h2>The underlying country gets deeper. Your integration stays stable.</h2><p>That is the point of PropData. Teams should be building underwriting, mapping, valuation, AI and customer experiences — not maintaining eight jurisdiction-specific ingestion stacks.</p><div class="contract-points"><div><i>✓</i><span><b>REST</b><small>Production application delivery</small></span></div><div><i>✓</i><span><b>MCP</b><small>AI-native property tools</small></span></div><div><i>✓</i><span><b>Bulk</b><small>High-volume and enterprise delivery</small></span></div><div><i>✓</i><span><b>Custom</b><small>Private endpoints and response contracts</small></span></div></div></div>
       </div>
     </section>
 
-    <section id="pricing" class="section pricing">
+    <section id="pricing" class="section pricing-section">
       <div class="shell">
-        <div class="section-head pricing-head reveal">
-          <div class="eyebrow">FOUNDING AUSTRALIA PRICING</div>
-          <h2>Start now. Grow with the graph.</h2>
-          <p class="pricing-sub">Get into the Australia product while the national buildout is compounding. Founding pricing is locked for the first 12 months of an active subscription.</p>
-        </div>
-
+        <div class="section-head pricing-head reveal"><div class="eyebrow">SELF-SERVE AUSTRALIA · SECURE STRIPE CHECKOUT</div><h2>Choose your Australia package.</h2><p>Local AUD billing. Clear monthly limits. Start directly with secure Stripe checkout — no email gate.</p><div class="pricing-trust"><span>🔒 Secure Stripe checkout</span><span>⚡ Direct subscription</span><span>🇦🇺 AUD billing</span><span>↗ Cancel through Stripe billing</span></div></div>
         <div class="price-grid">
-          <article class="price-card reveal">
-            <div class="price-top"><div class="price-name">DEVELOPER</div><span class="price-badge">FOUNDING</span></div>
-            <div class="price"><b>A$149</b><span>/ month</span></div>
-            <div class="volume"><b>10K</b><span>REQUESTS / MONTH</span><div class="volume-bar"><i></i></div></div>
-            <div class="bestfor"><small>BEST FOR</small><p>Prototyping, product validation and focused Australian property workflows.</p></div>
-            <ul class="plan-list"><li>Australia country access</li><li>Live Queensland foundation</li><li>National coverage as it rolls in</li><li>Source provenance</li><li>REST developer access</li></ul>
-            <a class="btn btn-dark" href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Developer%20Plan">Start Developer <span>↗</span></a>
-            <div class="price-foot">AUD · MONTHLY · SELF-SERVE CHECKOUT BEING ACTIVATED</div>
-          </article>
-
-          <article class="price-card featured reveal">
-            <div class="price-top"><div class="price-name">BUILDER</div><span class="price-badge">PRODUCTION PICK</span></div>
-            <div class="price"><b>A$449</b><span>/ month</span></div>
-            <div class="volume"><b>50K</b><span>REQUESTS / MONTH</span><div class="volume-bar"><i></i></div></div>
-            <div class="bestfor"><small>BEST FOR</small><p>Production applications actively serving users across Australian property workflows.</p></div>
-            <ul class="plan-list"><li>Everything in Developer</li><li>50K monthly requests</li><li>Production-oriented volume</li><li>REST + MCP compatibility</li><li>Priority Australia rollout updates</li></ul>
-            <a class="btn btn-primary" href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Builder%20Plan">Start Builder <span>↗</span></a>
-            <div class="price-foot">AUD · MONTHLY · FOUNDING PRICE LOCK</div>
-          </article>
-
-          <article class="price-card reveal">
-            <div class="price-top"><div class="price-name">SCALE</div><span class="price-badge">HIGH VOLUME</span></div>
-            <div class="price"><b>A$1,199</b><span>/ month</span></div>
-            <div class="volume"><b>250K</b><span>REQUESTS / MONTH</span><div class="volume-bar"><i></i></div></div>
-            <div class="bestfor"><small>BEST FOR</small><p>Platforms, GIS products and data operations running sustained Australian workloads.</p></div>
-            <ul class="plan-list"><li>Everything in Builder</li><li>250K monthly requests</li><li>Higher-volume platform use</li><li>Bulk workflow eligibility</li><li>Direct integration support</li></ul>
-            <a class="btn btn-dark" href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Scale%20Plan">Start Scale <span>↗</span></a>
-            <div class="price-foot">AUD · MONTHLY · FOUNDING PRICE LOCK</div>
-          </article>
+          <article class="price-card reveal"><div class="price-top"><span>DEVELOPER</span><small>DIRECT &amp; VALIDATE</small></div><div class="price"><b>A$149</b><span>/month</span></div><div class="usd">≈ US$107 / month · reference only</div><div class="request-line"><b>10,000</b><span>requests / month</span></div><ul><li>Australia country access</li><li>Live Queensland foundation</li><li>National depth as it expands</li><li>Source provenance</li><li>REST + MCP compatible access</li></ul><a class="btn btn-checkout" href="https://buy.stripe.com/eVqcN53A256e6xD9ID7wA0d">Subscribe with Stripe <span>→</span></a><div class="stripe-foot">🔒 STRIPE · AUD · MONTHLY SUBSCRIPTION</div></article>
+          <article class="price-card featured reveal"><div class="popular">PRODUCTION PICK</div><div class="price-top"><span>BUILDER</span><small>PRODUCTION APPLICATIONS</small></div><div class="price"><b>A$449</b><span>/month</span></div><div class="usd">≈ US$323 / month · reference only</div><div class="request-line"><b>50,000</b><span>requests / month</span></div><ul><li>Everything in Developer</li><li>Production-oriented volume</li><li>REST + MCP workflows</li><li>Priority support</li><li>Australia rollout updates</li></ul><a class="btn btn-primary" href="https://buy.stripe.com/14A6oH9Yq6ai7BH0837wA0e">Subscribe with Stripe <span>→</span></a><div class="stripe-foot">🔒 STRIPE · AUD · MONTHLY SUBSCRIPTION</div></article>
+          <article class="price-card reveal"><div class="price-top"><span>SCALE</span><small>HIGH-VOLUME WORKLOADS</small></div><div class="price"><b>A$1,199</b><span>/month</span></div><div class="usd">≈ US$861 / month · reference only</div><div class="request-line"><b>250,000</b><span>requests / month</span></div><ul><li>Everything in Builder</li><li>High-volume Australia use</li><li>Bulk workflow eligibility</li><li>Advanced support</li><li>Platform-scale operations</li></ul><a class="btn btn-checkout" href="https://buy.stripe.com/28E5kD9YqgOWg8d9ID7wA0f">Subscribe with Stripe <span>→</span></a><div class="stripe-foot">🔒 STRIPE · AUD · MONTHLY SUBSCRIPTION</div></article>
+          <article class="price-card enterprise-card reveal"><div class="price-top"><span>ENTERPRISE</span><small>CUSTOM INFRASTRUCTURE</small></div><div class="price"><b>Custom</b></div><div class="usd">Multi-country · private delivery · SLA</div><div class="request-line"><b>Custom</b><span>volume &amp; delivery</span></div><ul><li>Private endpoints</li><li>Bulk &amp; custom schemas</li><li>White-label delivery</li><li>Source expansion planning</li><li>Founder-level integration</li></ul><a class="btn btn-enterprise" href="https://calendly.com/proptechusa">Build an enterprise contract <span>→</span></a><div class="stripe-foot">DIRECT CONTRACT · CUSTOM SCOPE</div></article>
         </div>
-
-        <div class="enterprise reveal">
-          <div><div class="eyebrow">ENTERPRISE · CUSTOM</div><h3>Need bulk, private delivery or more than one country?</h3><p>Custom endpoints, bulk data, private source integration, webhooks, white-label delivery, multi-country contracts and customer-specific infrastructure remain sales-led.</p></div>
-          <a class="btn btn-green" href="https://calendly.com/proptechusa">Build an enterprise contract <span>→</span></a>
-        </div>
-        <p class="founder-price"><b>FOUNDING PRICING:</b> the displayed Australia rate is locked for the first 12 months of an active subscription. Future new-customer pricing can change as national depth expands.</p>
+        <p class="pricing-note">Founding Australia pricing is intended to remain locked for the first 12 months of an active subscription. Approximate USD figures are reference values only; Stripe bills the self-serve plans above in AUD.</p>
       </div>
     </section>
 
-    <section class="section developers">
-      <div class="shell developer-grid">
-        <div class="developer-copy reveal">
-          <div class="eyebrow">FOR DEVELOPERS & AGENTS</div>
-          <h2>Country-aware property intelligence without the ingestion project.</h2>
-          <p>PropData handles source discovery, ingestion, normalisation, identity, provenance and delivery. Your application calls one contract and sees Australia deepen underneath it.</p>
-          <div class="developer-links"><a class="btn btn-primary" href="/docs.html">Open Australia docs</a><a class="btn btn-dark" href="https://propdata.proptechusa.ai/">Global PropData</a></div>
-        </div>
-
-        <div class="terminal reveal">
-          <div class="terminal-head"><span>PROPDATA · AUSTRALIA</span><span>API CONTRACT</span></div>
-          <div class="terminal-body"><span class="prompt">$</span> curl <span class="url">"https://api.proptechusa.ai/v1/property?country=AU&amp;address=..."</span> \
-  -H <span class="json">"X-API-Key: $PROPDATA_API_KEY"</span>
-
-{
-  "country": "AU",
-  "coverage_status": "live_or_expanding",
-  "match_level": "source_native",
-  "property": { ... },
-  "provenance": [ ... ]
-}</div>
-          <div class="terminal-foot"><div><b>REST</b><span>Application delivery</span></div><div><b>MCP</b><span>AI-native tools</span></div><div><b>BULK</b><span>Enterprise delivery</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="shell cta-card reveal">
-        <div>
-          <div class="eyebrow">AUSTRALIA · PROPDATA</div>
-          <h2>Build while the graph gets bigger.</h2>
-          <p>The product is already live, the national ingestion program is moving, and the commercial model is now set. Start with the Australia contract today and inherit the expanding source depth as it lands.</p>
-        </div>
-        <div class="cta-actions"><a class="btn btn-primary" href="#pricing">Choose a plan</a><a class="btn btn-dark" href="https://calendly.com/proptechusa">Talk to PropData</a></div>
+    <section class="section final-section">
+      <div class="shell final-card reveal">
+        <img src="https://images.unsplash.com/photo-1772325652571-f1406f80ee01?auto=format&fit=crop&w=2000&q=86" alt="Australian property and green urban infrastructure" loading="lazy">
+        <div class="final-shade"></div>
+        <div class="final-copy"><div class="eyebrow">BUILD WHILE THE GRAPH GETS BIGGER</div><h2>Start with Australia today.</h2><p>The production foundation is live. National ingestion is moving. The subscription layer is open. Build against one Australia contract and inherit the source depth as it arrives.</p><div><a class="btn btn-primary" href="#pricing">Choose a plan</a><a class="btn btn-glass" href="/docs.html">Read the docs</a></div></div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="shell">
-      <div class="footer-grid">
-        <div class="footer-brand"><a class="brand" href="#top"><img src="/favicon.svg" alt="" width="38" height="38"><span class="brand-copy"><strong>PROPDATA</strong><small>AUSTRALIA</small></span></a><p>Source-aware Australian property intelligence infrastructure from PropTechUSA.ai. One country contract, expanding state by state.</p></div>
-        <div class="footer-col"><h4>AUSTRALIA</h4><a href="#product">Product</a><a href="#coverage">Coverage</a><a href="#pricing">Pricing</a><a href="/docs.html">Developers</a></div>
-        <div class="footer-col"><h4>NETWORK</h4><a href="https://propdata.proptechusa.ai/">PropData</a><a href="https://global.proptechusa.ai/">Global</a><a href="https://data.proptechusa.ai/">Data</a><a href="https://proptechusa.ai/">PropTechUSA.ai</a></div>
-        <div class="footer-col"><h4>CONTACT</h4><a href="mailto:sales@proptechusa.ai">sales@proptechusa.ai</a><a href="https://calendly.com/proptechusa">Book a meeting</a><a href="tel:+18887843881">1-888-784-3881</a></div>
+      <div class="footer-top">
+        <div class="footer-brand"><a class="brand" href="#top"><img src="/favicon.svg" alt="" width="42" height="42"><span class="brand-copy"><strong>PropData</strong><small>AUSTRALIA · BY PROPTECHUSA.AI</small></span></a><p>Australia's source-aware property intelligence infrastructure. One API. Every property. Every source we can responsibly connect.</p><div class="footer-status"><i></i> Australia product live · national depth expanding</div></div>
+        <div class="footer-col"><h4>AUSTRALIA</h4><a href="#product">Product</a><a href="#coverage">Coverage roadmap</a><a href="#pricing">Pricing</a><a href="/docs.html">Developer docs</a></div>
+        <div class="footer-col"><h4>COUNTRIES</h4><a href="https://propdata.proptechusa.ai/">🇺🇸 United States</a><a href="https://nz.proptechusa.ai/">🇳🇿 New Zealand</a><a href="https://ee.proptechusa.ai/">🇪🇪 Estonia</a><a href="https://gb.proptechusa.ai/">🇬🇧 Great Britain</a><a href="https://au.proptechusa.ai/">🇦🇺 Australia</a></div>
+        <div class="footer-col"><h4>PROPDATA NETWORK</h4><a href="https://proptechusa.ai/">PropTechUSA.ai</a><a href="https://propdata.proptechusa.ai/">PropData Platform</a><a href="https://global.proptechusa.ai/">Global Coverage</a><a href="https://data.proptechusa.ai/">Data Solutions</a></div>
+        <div class="footer-col"><h4>ACCESS</h4><a href="https://buy.stripe.com/eVqcN53A256e6xD9ID7wA0d">Developer · A$149</a><a href="https://buy.stripe.com/14A6oH9Yq6ai7BH0837wA0e">Builder · A$449</a><a href="https://buy.stripe.com/28E5kD9YqgOWg8d9ID7wA0f">Scale · A$1,199</a><a href="https://calendly.com/proptechusa">Enterprise</a></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 PropTechUSA.ai · PropData Australia</span><span>Queensland live · National coverage expanding · Source-native provenance preserved</span></div>
+      <div class="footer-bottom"><span>© 2026 PropTechUSA.ai · PropData Australia</span><span><a href="mailto:sales@proptechusa.ai">sales@proptechusa.ai</a> · <a href="tel:+18887843881">1-888-784-3881</a></span><span>Source-native · Country-aware · Fail-closed</span></div>
     </div>
   </footer>
-
+  <div id="success" class="success-toast" role="status" aria-live="polite"><b>Subscription received.</b><span>Welcome to PropData Australia. We are provisioning your access under the selected plan.</span><button type="button" aria-label="Dismiss">×</button></div>
   <script src="/site.js" defer></script>
 </body>
 </html>
