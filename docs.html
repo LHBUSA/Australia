@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PropData Australia Developer Docs | AU Property API</title>
+  <meta name="description" content="Developer guide for PropData Australia: country-aware property lookup, coverage semantics, source provenance and Australian jurisdiction handling.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://au.proptechusa.ai/docs.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/site.css">
+  <style>
+    .docs{padding:120px 0 90px}.docs-layout{display:grid;grid-template-columns:250px 1fr;gap:54px}.docs-nav{position:sticky;top:100px;height:max-content;padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.docs-nav strong{font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.13em;color:var(--blue)}.docs-nav a{display:block;margin-top:12px;font-size:10px;color:var(--muted)}.docs-nav a:hover{color:#fff}.docs-main{max-width:900px}.docs-main h1{margin:17px 0 0;font-size:clamp(45px,6vw,80px);line-height:.92;letter-spacing:-.06em}.docs-main>p{max-width:760px;color:var(--muted);font-size:15px;line-height:1.85}.doc-section{padding:50px 0;border-top:1px solid var(--line)}.doc-section h2{margin:0;font-size:31px;letter-spacing:-.04em}.doc-section h3{margin:28px 0 8px;font-size:18px}.doc-section p,.doc-section li{color:#8eaabd;font-size:12px;line-height:1.8}.doc-section code{font-family:"DM Mono",monospace;color:#a9f1df}.endpoint{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:15px;border:1px solid var(--line);border-radius:14px;background:#051629;margin-top:10px}.method{font-family:"DM Mono",monospace;font-size:8px;color:#051629;background:var(--green);border-radius:7px;padding:6px 8px}.endpoint code{font-size:9px;color:#c5e8f7}.doc-table{width:100%;border-collapse:collapse;margin-top:18px}.doc-table th,.doc-table td{text-align:left;padding:13px;border-bottom:1px solid var(--line);font-size:10px}.doc-table th{font-family:"DM Mono",monospace;color:#7fa1b6}.doc-table td{color:#a9bfcd}.callout{margin-top:20px;padding:17px;border:1px solid rgba(75,226,182,.18);background:rgba(75,226,182,.055);border-radius:15px;font-size:10px;line-height:1.8;color:#a7cbbb}@media(max-width:850px){.docs-layout{grid-template-columns:1fr}.docs-nav{position:static}.docs{padding-top:100px}}
+  </style>
+</head>
+<body>
+<header class="site-header scrolled"><div class="shell nav"><a class="brand" href="/"><img src="/favicon.svg" alt=""><span class="brand-copy"><strong>PROPDATA</strong><small>AUSTRALIA DOCS</small></span></a><nav class="primary-nav"><a href="/#coverage">Coverage</a><a href="/#pricing">Pricing</a><a href="https://propdata.proptechusa.ai/">Global PropData</a></nav><div class="nav-actions"><a class="nav-cta" href="/#pricing">Get API access</a></div></div></header>
+<main class="docs"><div class="shell docs-layout">
+  <aside class="docs-nav"><strong>AUSTRALIA DOCS</strong><a href="#start">Quick start</a><a href="#country">Country contract</a><a href="#coverage">Coverage semantics</a><a href="#identity">Identity</a><a href="#provenance">Provenance</a><a href="#endpoints">Endpoints</a><a href="#states">Jurisdictions</a></aside>
+  <article class="docs-main">
+    <div class="eyebrow">PROPDATA · AU</div><h1>Build on Australian property identity.</h1><p>PropData Australia exposes an expanding, source-native Australian property graph through the same country-aware contract used across the global PropData network. Coverage is explicit: live source facts are returned as facts; expanding layers are never silently fabricated.</p>
+
+    <section id="start" class="doc-section"><h2>Quick start</h2><p>Send <code>country=AU</code> with the strongest identity you have. In production, authenticate with your PropData API key.</p><div class="code-window"><div class="code-head"><span>curl</span><span>AU property lookup</span></div><div class="code-body">curl "https://api.proptechusa.ai/v1/property?country=AU&amp;address=YOUR_ADDRESS" \
+  -H "X-API-Key: $PROPDATA_API_KEY"</div></div><div class="callout"><b>Important:</b> Australian coverage is expanding. Treat <code>coverage_status</code>, <code>match_level</code> and provenance as first-class response fields rather than assuming every state currently exposes the same source depth.</div></section>
+
+    <section id="country" class="doc-section"><h2>Country-aware contract</h2><p>Australia is not normalized by deleting jurisdiction semantics. The stable API contract wraps native source identifiers and relationships.</p><table class="doc-table"><tr><th>Field</th><th>Meaning</th></tr><tr><td><code>country</code></td><td>ISO country code, always AU for this product.</td></tr><tr><td><code>jurisdiction</code></td><td>State or territory context when resolved.</td></tr><tr><td><code>match_level</code></td><td>Strength and type of property resolution.</td></tr><tr><td><code>coverage_status</code></td><td>Whether the requested layer is live, partial, expanding or unavailable.</td></tr><tr><td><code>provenance</code></td><td>Source system, dataset, revision and record lineage.</td></tr></table></section>
+
+    <section id="coverage" class="doc-section"><h2>Coverage semantics</h2><p>The Australia product intentionally distinguishes product availability from dataset completeness. Queensland's parcel/address baseline is live. National G-NAF and additional states are rolling into the contract.</p><ul><li><code>live</code> — the source layer is available for production lookup.</li><li><code>expanding</code> — the layer is actively being loaded or broadened.</li><li><code>partial</code> — a valid property can be resolved but not every enrichment is present.</li><li><code>unavailable</code> — PropData does not have a verified source fact for that layer.</li></ul></section>
+
+    <section id="identity" class="doc-section"><h2>Identity before enrichment</h2><p>Australian source identifiers can differ by jurisdiction. PropData keeps them visible rather than replacing them with an invented universal parcel number.</p><h3>Queensland</h3><p>QSCF parcel identity and QAMF address identity are live. Native source record IDs remain linked to PropData global IDs.</p><h3>National G-NAF</h3><p>G-NAF address detail PIDs become the national address spine as the state-partitioned baseline advances.</p><h3>NSW and Victoria</h3><p>NSW <code>prop_id</code> and Victoria SPI/property identifiers are designed to remain first-class native identifiers in the source-aware graph.</p></section>
+
+    <section id="provenance" class="doc-section"><h2>Provenance</h2><p>Every Australian source layer is expected to remain traceable to the authority that published it. Source name, dataset ID, source record ID, revision and fetched timestamp are preserved where available.</p><div class="code-window"><div class="code-head"><span>response</span><span>provenance shape</span></div><div class="code-body">"provenance": {
+  "source_name": "Queensland Spatial Cadastral Fabric",
+  "source_dataset_id": "QSCF Lot parcels",
+  "source_revision": "2026-08",
+  "jurisdiction": "QLD"
+}</div></div></section>
+
+    <section id="endpoints" class="doc-section"><h2>Core endpoints</h2><p>The Australia contract is accessed through the global PropData API. Endpoint availability can expand as Australian layers are promoted.</p><div class="endpoint"><span class="method">GET</span><code>/v1/property?country=AU&amp;address=...</code></div><div class="endpoint"><span class="method">GET</span><code>/v1/property/by-location?country=AU&amp;lat=...&amp;lng=...</code></div><div class="endpoint"><span class="method">GET</span><code>/v1/parcel-geometry?country=AU&amp;parcel=...</code></div><div class="endpoint"><span class="method">GET</span><code>/v1/countries</code></div></section>
+
+    <section id="states" class="doc-section"><h2>Jurisdiction roadmap</h2><table class="doc-table"><tr><th>Jurisdiction</th><th>Product state</th><th>Primary direction</th></tr><tr><td>Queensland</td><td>Live</td><td>QSCF parcels + QAMF addresses</td></tr><tr><td>National</td><td>Rolling in</td><td>G-NAF geocoded address spine</td></tr><tr><td>New South Wales</td><td>Next</td><td>Land values + PSI sales + spatial cadastre</td></tr><tr><td>Victoria</td><td>Next</td><td>Vicmap Property + address relationships</td></tr><tr><td>SA / TAS / WA / ACT / NT</td><td>Queued</td><td>State/territory cadastral and address sources</td></tr></table><div class="callout">For production evaluation or a specific Australian jurisdiction requirement, contact <a href="mailto:sales@proptechusa.ai">sales@proptechusa.ai</a>. Customer demand can affect source-expansion priority.</div></section>
+  </article>
+</div></main>
+<footer class="footer"><div class="shell footer-bottom"><span>© 2026 PropTechUSA.ai · PropData Australia</span><span><a href="/">Australia product</a> · <a href="https://propdata.proptechusa.ai/">Global PropData</a></span></div></footer>
+</body>
+</html>
