@@ -21,6 +21,11 @@
   if (qldPhoto) qldPhoto.src = photos.queensland;
   if (finalPhoto) finalPhoto.src = photos.queensland;
 
+  document.querySelectorAll('a[href="https://gb.proptechusa.ai/"]').forEach(link => {
+    link.href = 'https://global.proptechusa.ai/';
+    link.setAttribute('title', 'Great Britain coverage is currently managed through PropData Global');
+  });
+
   const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 10);
   onScroll();
   addEventListener('scroll', onScroll, { passive: true });
