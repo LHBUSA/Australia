@@ -1,0 +1,12 @@
+{
+  "name": "PropData Australia",
+  "short_name": "PropData AU",
+  "description": "Australia property intelligence infrastructure by PropData.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#041225",
+  "theme_color": "#041225",
+  "icons": [
+    {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}
