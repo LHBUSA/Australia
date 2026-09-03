@@ -6,6 +6,21 @@
   const panels = [...document.querySelectorAll('[data-state-panel]')];
   const toast = document.querySelector('#success');
 
+  const photos = {
+    hero: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Aerial_view_of_Sydney_Harbour.jpg',
+    residential: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Brisbane_seen_from_air,_suburb.jpg',
+    queensland: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Brisbane_from_air.jpg'
+  };
+
+  const heroPhoto = document.querySelector('.hero-photo');
+  const productPhoto = document.querySelector('.photo-large img');
+  const qldPhoto = document.querySelector('[data-state-panel="QLD"] .panel-photo img');
+  const finalPhoto = document.querySelector('.final-card > img');
+  if (heroPhoto) heroPhoto.src = photos.hero;
+  if (productPhoto) productPhoto.src = photos.residential;
+  if (qldPhoto) qldPhoto.src = photos.queensland;
+  if (finalPhoto) finalPhoto.src = photos.queensland;
+
   const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 10);
   onScroll();
   addEventListener('scroll', onScroll, { passive: true });
@@ -100,4 +115,12 @@
       link.dataset.checkoutStarted = 'true';
     });
   });
+
+  const footerBottom = document.querySelector('.footer-bottom');
+  if (footerBottom && !document.querySelector('.photo-credit')) {
+    const credit = document.createElement('span');
+    credit.className = 'photo-credit';
+    credit.innerHTML = 'Photography: <a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Sydney_Harbour.jpg" target="_blank" rel="noopener">Sydney Harbour — Andy / CC BY-SA 2.0</a> · Brisbane aerials via Wikimedia Commons';
+    footerBottom.insertAdjacentElement('afterend', credit);
+  }
 })();
