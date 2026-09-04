@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>PropData Australia Workspace | AU Property Intelligence</title>
+  <meta name="description" content="PropData Australia workspace for coverage review, country-scoped request composition and production integration planning.">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <link rel="canonical" href="https://au.proptechusa.ai/workspace">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/country-product.css">
+</head>
+<body>
+  <header class="site-header scrolled">
+    <div class="shell nav">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="42" height="42"><span class="brand-copy"><strong>PropData</strong><small>AUSTRALIA · WORKSPACE</small></span></a>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation"><a href="/">Product</a><a href="/docs">Docs</a><a href="/workspace">Workspace</a><a href="/#coverage">Coverage</a><a href="/#pricing">Pricing</a></nav>
+      <div class="nav-actions"><a class="nav-docs" href="/docs">Docs</a><a class="nav-cta" href="/#pricing">Get API Access</a></div>
+    </div>
+  </header>
+
+  <main class="au-workspace">
+    <div class="shell workspace-shell">
+      <aside class="workspace-side">
+        <div class="ws-title">Australia Workspace</div>
+        <div class="ws-sub">COUNTRY SCOPE · AU</div>
+        <div class="workspace-tabs" role="tablist" aria-label="Workspace sections">
+          <button class="active" type="button" data-ws-tab="overview">Overview</button>
+          <button type="button" data-ws-tab="builder">Request Builder</button>
+          <button type="button" data-ws-tab="coverage">Coverage</button>
+          <button type="button" data-ws-tab="integration">Integration</button>
+          <button type="button" data-ws-tab="access">Access</button>
+        </div>
+      </aside>
+
+      <section class="workspace-main">
+        <div class="ws-panel" data-ws-panel="overview">
+          <div class="ws-hero">
+            <div class="eyebrow">PROPDATA AUSTRALIA</div>
+            <h1>Country intelligence cockpit.</h1>
+            <p>Review the verified production graph, compose Australia-scoped API requests and hand safe server-side examples directly to your application team. This workspace never asks you to expose a production API key in browser JavaScript.</p>
+            <div class="ws-metrics">
+              <div class="ws-metric"><b>16.97M</b><span>national G-NAF addresses</span></div>
+              <div class="ws-metric"><b>7.05M+</b><span>live cadastral records</span></div>
+              <div class="ws-metric"><b>4</b><span>cadastral jurisdictions live</span></div>
+              <div class="ws-metric"><b>AU</b><span>stable country scope</span></div>
+            </div>
+          </div>
+
+          <div class="ws-card">
+            <h2>Production state</h2>
+            <p>National address identity is complete. Queensland, Victoria, Tasmania and the ACT have certified cadastral baselines. NSW is being rebuilt against a pinned source revision after the public source advanced during its first baseline; WA, SA and NT deeper cadastre remain source-rights gated.</p>
+            <div class="ws-coverage-grid">
+              <div class="ws-coverage-card"><b>Australia national</b><span>G-NAF 2026-08 baseline complete at 16,970,406 records.</span><i class="ws-status">ADDRESS LIVE</i></div>
+              <div class="ws-coverage-card"><b>QLD · VIC · TAS · ACT</b><span>Certified state/territory cadastral baselines with native identifiers and polygon geometry.</span><i class="ws-status">CADASTRE LIVE</i></div>
+              <div class="ws-coverage-card"><b>New South Wales</b><span>Replacement baseline must reconcile to one pinned statewide source revision before promotion.</span><i class="ws-status loading">SOURCE GATED</i></div>
+              <div class="ws-coverage-card"><b>WA · SA · NT</b><span>National addresses live; deeper cadastral layers require authoritative delivery and commercial-use rights.</span><i class="ws-status hold">RIGHTS GATED</i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ws-panel" data-ws-panel="builder" hidden>
+          <div class="ws-hero"><div class="eyebrow">REQUEST BUILDER</div><h1>Compose an AU request.</h1><p>Generate production-safe server-side examples. Your API key stays in your server environment as <code>PROPDATA_API_KEY</code>; this page does not collect, persist or transmit it.</p></div>
+          <div class="ws-card">
+            <h2>Request</h2>
+            <div class="ws-form-grid">
+              <div class="ws-field full"><label for="ws-endpoint">ROUTE</label><select id="ws-endpoint"><option value="property">Property by address</option><option value="location">Property by coordinates</option><option value="geometry">Parcel geometry</option><option value="usage">Account usage</option><option value="health">System health</option></select></div>
+              <div class="ws-field full" data-field="address"><label for="ws-address">AUSTRALIAN ADDRESS</label><input id="ws-address" type="text" value="4 ACT Court, Alexandra Hills QLD 4161" autocomplete="street-address"></div>
+              <div class="ws-field" data-field="lat" hidden><label for="ws-lat">LATITUDE</label><input id="ws-lat" type="text" placeholder="-27.47"></div>
+              <div class="ws-field" data-field="lng" hidden><label for="ws-lng">LONGITUDE</label><input id="ws-lng" type="text" placeholder="153.03"></div>
+              <div class="ws-field full" data-field="parcel" hidden><label for="ws-parcel">NATIVE PARCEL / LOT IDENTIFIER</label><input id="ws-parcel" type="text" placeholder="Enter the promoted native identifier"></div>
+            </div>
+            <div class="ws-preset-row"><button class="ws-preset" type="button" data-preset="qld-address">Verified QLD G-NAF address</button><button class="ws-preset" type="button" data-preset="location">Coordinate request</button><button class="ws-preset" type="button" data-preset="usage">Usage endpoint</button></div>
+            <div class="ws-actions"><button class="btn btn-primary" type="button" id="ws-copy-curl">Copy cURL</button><button class="btn btn-glass" type="button" id="ws-copy-node">Copy Node.js</button><a class="btn btn-glass" href="/docs#quickstart">Read integration guide</a></div>
+            <div class="ws-key-note">The generated examples reference <code>PROPDATA_API_KEY</code>. Do not replace that placeholder with a real key in client-side code.</div>
+            <div class="ws-output"><div class="ws-output-head"><span id="ws-output-label">cURL</span><span id="ws-copy-status">READY</span></div><pre id="ws-output"></pre></div>
+          </div>
+        </div>
+
+        <div class="ws-panel" data-ws-panel="coverage" hidden>
+          <div class="ws-hero"><div class="eyebrow">COVERAGE CONTROL PLANE</div><h1>Know what is real before you depend on it.</h1><p>Australia separates national address identity from cadastral depth and enrichment. A source appears here as live only after its production baseline is certified.</p></div>
+          <div class="ws-card">
+            <h2>Jurisdiction matrix</h2>
+            <div class="ws-coverage-grid">
+              <div class="ws-coverage-card"><b>National · G-NAF</b><span>16,970,406 geocoded address records. 9/9 source partitions certified.</span><i class="ws-status">BASELINE COMPLETE</i></div>
+              <div class="ws-coverage-card"><b>Queensland · QSCF</b><span>2,156,480 lot parcels plus the state address foundation.</span><i class="ws-status">BASELINE COMPLETE</i></div>
+              <div class="ws-coverage-card"><b>Victoria · Vicmap</b><span>4,303,714 parcel records with PFI/UFI identity retained.</span><i class="ws-status">BASELINE COMPLETE</i></div>
+              <div class="ws-coverage-card"><b>Tasmania · LIST</b><span>439,539 cadastral parcels with PID, volume, folio and UFI semantics.</span><i class="ws-status">BASELINE COMPLETE</i></div>
+              <div class="ws-coverage-card"><b>ACT · ACTGOV BLOCK</b><span>152,986 legal block records with section/division/district context.</span><i class="ws-status">BASELINE COMPLETE</i></div>
+              <div class="ws-coverage-card"><b>New South Wales</b><span>3.35M+ statewide lot scale. Promotion waits on a single pinned source revision and full reconciliation.</span><i class="ws-status loading">NEXT</i></div>
+              <div class="ws-coverage-card"><b>Western Australia</b><span>National G-NAF address identity live. Deeper statewide cadastre is licensing/delivery gated.</span><i class="ws-status hold">CADASTRE HOLD</i></div>
+              <div class="ws-coverage-card"><b>South Australia</b><span>National G-NAF address identity live. Bulk DCDB/cadastral access is rights gated.</span><i class="ws-status hold">CADASTRE HOLD</i></div>
+              <div class="ws-coverage-card"><b>Northern Territory</b><span>National G-NAF address identity live. Authoritative deep-cadastre delivery remains source discovery.</span><i class="ws-status hold">CADASTRE HOLD</i></div>
+            </div>
+          </div>
+          <div class="ws-card"><h2>Coverage rule</h2><p>A valid base match remains valid even when an optional intelligence layer is unavailable. Treat returned <code>match_level</code>, <code>coverage_status</code> and provenance as first-class application state. Unknown is not a negative finding and is never silently replaced by broader or adjacent geography.</p></div>
+        </div>
+
+        <div class="ws-panel" data-ws-panel="integration" hidden>
+          <div class="ws-hero"><div class="eyebrow">INTEGRATION</div><h1>One global edge. Australia-native execution.</h1><p>Use the same PropData account, key-management and usage layer while country-scoping property workflows to <code>AU</code>.</p></div>
+          <div class="ws-card">
+            <h2>Production principles</h2>
+            <div class="ws-coverage-grid">
+              <div class="ws-coverage-card"><b>Server-side credentials</b><span>Send direct REST credentials only in the <code>x-api-key</code> header from trusted server infrastructure.</span></div>
+              <div class="ws-coverage-card"><b>Country scope</b><span>Pass <code>country=AU</code> for Australia property, coordinate and geometry workflows.</span></div>
+              <div class="ws-coverage-card"><b>Fail-open enrichment</b><span>A valid base property result should not become an error only because an optional intelligence layer is unavailable.</span></div>
+              <div class="ws-coverage-card"><b>Fail-closed facts</b><span>Do not infer missing Australian source truth. Preserve explicit unavailable/null states and source provenance.</span></div>
+            </div>
+          </div>
+          <div class="ws-card"><h2>Delivery options</h2><p>REST supports application-level property workflows. OAuth-protected MCP supports compatible AI clients. Bulk, custom endpoints, white-label and workflow-specific response contracts are available for enterprise integrations.</p><div class="ws-actions"><a class="btn btn-primary" href="/docs#delivery">Delivery documentation →</a><a class="btn btn-glass" href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Integration">Discuss architecture</a></div></div>
+        </div>
+
+        <div class="ws-panel" data-ws-panel="access" hidden>
+          <div class="ws-hero"><div class="eyebrow">ACCESS</div><h1>Choose the Australia contract that fits the workload.</h1><p>Self-serve plans bill in Australian dollars. Enterprise contracts can add bulk delivery, custom response design, white-label infrastructure and country-specific support.</p></div>
+          <div class="ws-card">
+            <div class="ws-coverage-grid">
+              <div class="ws-coverage-card"><b>Developer · A$149/mo</b><span>Production Australia REST, workspace, docs and promoted country coverage.</span><div class="ws-actions"><a class="btn btn-checkout" href="https://buy.stripe.com/eVqcN53A256e6xD9ID7wA0d">Choose Developer</a></div></div>
+              <div class="ws-coverage-card"><b>Builder · A$449/mo</b><span>Higher-volume country-native workflows and priority integration support.</span><div class="ws-actions"><a class="btn btn-primary" href="https://buy.stripe.com/14A6oH9Yq6ai7BH0837wA0e">Choose Builder</a></div></div>
+              <div class="ws-coverage-card"><b>Scale · A$1,199/mo</b><span>Scale production workloads and higher-throughput Australia graph access.</span><div class="ws-actions"><a class="btn btn-checkout" href="https://buy.stripe.com/28E5kD9YqgOWg8d9ID7wA0f">Choose Scale</a></div></div>
+              <div class="ws-coverage-card"><b>Enterprise · Custom</b><span>Bulk, MCP, white-label, custom endpoints and integration contracts.</span><div class="ws-actions"><a class="btn btn-enterprise" href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Enterprise">Contact Enterprise</a></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="shell country-footer-links"><a href="/">Australia Product</a><a href="/docs">Developer Docs</a><a href="https://propdata.proptechusa.ai/">PropData Global</a><a href="https://global.proptechusa.ai/">Global Coverage</a><a href="mailto:sales@proptechusa.ai">sales@proptechusa.ai</a></div><div class="shell footer-bottom"><span>© 2026 PropTechUSA.ai · PropData Australia</span><span>Workspace · noindex</span></div></footer>
+  <script src="/site.js" defer></script>
+  <script src="/workspace.js" defer></script>
+</body>
+</html>
