@@ -1,0 +1,49 @@
+/* PropData Australia light workspace layer */
+body:has(.au-workspace){background:#f7faf8!important;color:#091a23!important}
+body:has(.au-workspace) .site-header{background:rgba(255,255,255,.96)!important;border-bottom:1px solid #dce6e0!important;box-shadow:0 2px 14px rgba(7,31,24,.035)!important}
+body:has(.au-workspace) .site-header .brand strong{color:#091a23!important}
+body:has(.au-workspace) .site-header .brand small{color:#75877f!important}
+body:has(.au-workspace) .site-header .primary-nav a{color:#566b62!important}
+body:has(.au-workspace) .site-header .primary-nav a:hover{color:#081d16!important}
+body:has(.au-workspace) .site-header .nav-docs{border-color:#cbd9d2!important;background:#fff!important;color:#274437!important}
+body:has(.au-workspace) .site-header .nav-cta{background:#071a25!important;color:#fff!important;border-color:#071a25!important}
+body:has(.au-workspace) .au-workspace{background:radial-gradient(circle at 92% 0,rgba(21,150,101,.08),transparent 28%),#f7faf8!important;padding-top:108px!important}
+body:has(.au-workspace) .workspace-side{background:#fff!important;border-color:#dce6e0!important;box-shadow:0 12px 40px rgba(7,31,24,.045)!important}
+body:has(.au-workspace) .workspace-side .ws-title{color:#0b2018!important}
+body:has(.au-workspace) .workspace-side .ws-sub{color:#08734f!important}
+body:has(.au-workspace) .workspace-tabs button{color:#63766d!important}
+body:has(.au-workspace) .workspace-tabs button.active,
+body:has(.au-workspace) .workspace-tabs button:hover{color:#08734f!important;border-color:#bee6d4!important;background:#effaf4!important}
+body:has(.au-workspace) .ws-hero{background:linear-gradient(135deg,#fff,#f0f8f4)!important;border-color:#d4e3db!important;box-shadow:0 14px 45px rgba(7,31,24,.04)!important}
+body:has(.au-workspace) .ws-hero h1{color:#091a23!important}
+body:has(.au-workspace) .ws-hero p{color:#5f7269!important}
+body:has(.au-workspace) .ws-hero .eyebrow{color:#08734f!important}
+body:has(.au-workspace) .ws-metric{background:#fff!important;border-color:#dce6e0!important}
+body:has(.au-workspace) .ws-metric b{color:#0b7d56!important}
+body:has(.au-workspace) .ws-metric span{color:#75877f!important}
+body:has(.au-workspace) .ws-card{background:#fff!important;border-color:#dce6e0!important;box-shadow:0 8px 28px rgba(7,31,24,.03)!important}
+body:has(.au-workspace) .ws-card h2{color:#0c2118!important}
+body:has(.au-workspace) .ws-card>p{color:#62756b!important}
+body:has(.au-workspace) .ws-coverage-card{background:#fbfdfc!important;border-color:#dce6e0!important;color:#12261e!important}
+body:has(.au-workspace) .ws-coverage-card b{color:#10251d!important}
+body:has(.au-workspace) .ws-coverage-card span{color:#687b72!important}
+body:has(.au-workspace) .ws-status{background:#eaf9f1!important;color:#08734f!important;border-color:#bee7d4!important}
+body:has(.au-workspace) .ws-status.loading{background:#eef6fb!important;color:#286c92!important;border-color:#cae0ee!important}
+body:has(.au-workspace) .ws-status.hold{background:#fff7e7!important;color:#8b6615!important;border-color:#edd9a7!important}
+body:has(.au-workspace) .ws-field label{color:#6a7f75!important}
+body:has(.au-workspace) .ws-field input,
+body:has(.au-workspace) .ws-field select{background:#fff!important;border-color:#cad8d1!important;color:#10251d!important}
+body:has(.au-workspace) .ws-field input:focus,
+body:has(.au-workspace) .ws-field select:focus{border-color:#66cba1!important;box-shadow:0 0 0 3px rgba(21,150,101,.08)!important}
+body:has(.au-workspace) .ws-key-note{color:#71847a!important}
+body:has(.au-workspace) .ws-preset{background:#f6faf8!important;border-color:#d4e1da!important;color:#536b60!important}
+body:has(.au-workspace) .ws-preset:hover{background:#edf9f3!important;border-color:#9fd8be!important;color:#08734f!important}
+body:has(.au-workspace) .btn.btn-glass,
+body:has(.au-workspace) .btn.btn-checkout{background:#fff!important;border-color:#cad8d1!important;color:#244137!important}
+body:has(.au-workspace) .btn.btn-primary{background:#071a25!important;color:#fff!important;border-color:#071a25!important}
+body:has(.au-workspace) .btn.btn-enterprise{background:#eef8f3!important;color:#08734f!important;border-color:#b9e2d0!important}
+body:has(.au-workspace) .ws-output{background:#071a25!important;border-color:#173642!important;box-shadow:0 12px 35px rgba(4,25,34,.08)!important}
+body:has(.au-workspace) .ws-output-head{border-color:rgba(255,255,255,.08)!important;color:#8ba3ae!important}
+body:has(.au-workspace) .ws-output pre{color:#d7e9ee!important}
+body:has(.au-workspace) .footer{background:#06151e!important}
+@media(max-width:900px){body:has(.au-workspace) .workspace-side{box-shadow:0 18px 50px rgba(7,31,24,.12)!important}}
