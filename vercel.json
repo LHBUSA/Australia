@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    {"source": "/", "destination": "/platform"}
+    {"source": "/", "destination": "/api/home"}
   ],
   "headers": [
     {
