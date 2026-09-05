@@ -12,8 +12,8 @@ module.exports = function handler(req, res) {
     [/property="og:title" content="[^"]*"/, 'property="og:title" content="PropData Australia | National property intelligence for software"'],
     [/property="og:description" content="[^"]*"/, 'property="og:description" content="National property intelligence combining G-NAF address identity, certified state-native cadastre, parcel geometry, coverage and provenance through one governed API."'],
     [/property="og:image" content="[^"]*"/, 'property="og:image" content="https://au.proptechusa.ai/api/og-image"'],
-    [/property="og:image:width" content="[^"]*"/, 'property="og:image:width" content="1200"'],
-    [/property="og:image:height" content="[^"]*"/, 'property="og:image:height" content="630"'],
+    [/property="og:image:width" content="[^"]*"/, 'property="og:image:width" content="600"'],
+    [/property="og:image:height" content="[^"]*"/, 'property="og:image:height" content="315"'],
     [/name="twitter:title" content="[^"]*"/, 'name="twitter:title" content="PropData Australia | National property intelligence for software"'],
     [/name="twitter:description" content="[^"]*"/, 'name="twitter:description" content="G-NAF identity, state-native cadastre, parcel geometry, coverage and provenance through one Australian property intelligence layer."'],
     [/name="twitter:image" content="[^"]*"/, 'name="twitter:image" content="https://au.proptechusa.ai/api/og-image"']
@@ -22,10 +22,10 @@ module.exports = function handler(req, res) {
   for (const [pattern, replacement] of replacements) html = html.replace(pattern, replacement);
 
   if (!html.includes('property="og:image:type"')) {
-    html = html.replace('<meta property="og:image:width" content="1200">', '<meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200">');
+    html = html.replace('<meta property="og:image:width" content="600">', '<meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="600">');
   }
   if (!html.includes('property="og:image:alt"')) {
-    html = html.replace('<meta property="og:image:height" content="630">', '<meta property="og:image:height" content="630"><meta property="og:image:alt" content="PropData Australia national property intelligence for software">');
+    html = html.replace('<meta property="og:image:height" content="315">', '<meta property="og:image:height" content="315"><meta property="og:image:alt" content="PropData Australia national property intelligence for software">');
   }
   if (!html.includes('name="twitter:image:alt"')) {
     html = html.replace('<meta name="twitter:image" content="https://au.proptechusa.ai/api/og-image">', '<meta name="twitter:image" content="https://au.proptechusa.ai/api/og-image"><meta name="twitter:image:alt" content="PropData Australia national property intelligence for software">');
