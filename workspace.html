@@ -1,134 +1,50 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>PropData Australia Workspace | AU Property Intelligence</title>
-  <meta name="description" content="PropData Australia workspace for coverage review, country-scoped request composition and production integration planning.">
-  <meta name="robots" content="noindex,nofollow,noarchive">
-  <link rel="canonical" href="https://au.proptechusa.ai/workspace">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/site.css">
-  <link rel="stylesheet" href="/country-product.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PropData Australia Workspace | API Explorer</title>
+<meta name="description" content="PropData Australia API workspace for composing country-scoped property, coordinate, geometry and account requests with production-safe server-side examples.">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#f7faf8">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://au.proptechusa.ai/workspace">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f9f7;--paper:#fff;--paper2:#eef5f1;--ink:#0b1d25;--muted:#62746b;--line:#dce6e0;--line2:#cad8d1;--green:#159665;--green2:#08734f;--green-soft:#ebfaf3;--blue:#2b78a3;--blue-soft:#edf7fc;--amber:#8b6816;--amber-soft:#fff7e7;--navy:#071a25;--navy2:#0b2632;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--shadow:0 18px 60px rgba(8,39,28,.07)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input{font:inherit}.shell{width:min(1240px,calc(100% - 40px));margin:auto}.top{position:sticky;top:0;z-index:50;height:72px;border-bottom:1px solid rgba(210,224,216,.9);background:rgba(255,255,255,.95);backdrop-filter:blur(18px)}.nav{height:100%;display:flex;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:10px;min-width:max-content}.brand img{width:38px;height:38px}.brand strong,.brand small{display:block}.brand strong{font-size:15px;letter-spacing:-.02em}.brand small{margin-top:2px;color:#778980;font-size:8px;letter-spacing:.13em}.nav-links{display:flex;align-items:center;gap:18px;margin-left:auto}.nav-links a{font-size:10px;font-weight:760;color:#596d63}.nav-links a:hover,.nav-links a.active{color:#08734f}.nav-cta{min-height:40px;padding:0 14px;border-radius:8px;background:var(--navy);color:#fff;display:inline-flex;align-items:center;font-size:9px;font-weight:900}.menu{display:none;margin-left:auto;width:40px;height:40px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+.workspace{padding:54px 0 76px;background:radial-gradient(circle at 92% 2%,rgba(21,150,101,.075),transparent 24%),var(--bg)}.workspace-head{display:flex;justify-content:space-between;gap:38px;align-items:flex-end;margin-bottom:22px}.eyebrow{color:var(--green2);font:900 8px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase}.workspace-head h1{max-width:720px;margin:10px 0 8px;font-size:clamp(38px,4.8vw,60px);line-height:.98;letter-spacing:-.052em}.workspace-head p{max-width:760px;margin:0;color:var(--muted);font-size:12px;line-height:1.7}.workspace-state{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.state-pill{padding:7px 9px;border:1px solid #bee6d4;border-radius:999px;background:#effaf4;color:#08734f;font:850 7px var(--mono);letter-spacing:.05em;white-space:nowrap}.state-pill.neutral{border-color:#d3dfd9;background:#fff;color:#63766d}
+.explorer{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--paper);box-shadow:var(--shadow)}.routebar{display:flex;align-items:center;gap:6px;padding:10px;border-bottom:1px solid var(--line);background:#fbfdfc;overflow:auto}.routebar-label{padding:0 8px 0 4px;color:#87978f;font:900 7px var(--mono);letter-spacing:.09em;white-space:nowrap}.route-btn{min-height:36px;padding:0 11px;border:1px solid transparent;border-radius:8px;background:transparent;color:#60736a;font-size:9px;font-weight:800;cursor:pointer;white-space:nowrap}.route-btn:hover{background:#f1f7f4;color:#23483a}.route-btn.active{border-color:#bfe4d2;background:#eaf9f1;color:#08734f}.route-btn .verb{margin-right:5px;color:#08734f;font:900 7px var(--mono)}.explorer-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:560px}.request-panel{padding:26px;border-right:1px solid var(--line)}.panel-kicker{color:#7c8d85;font:900 7px var(--mono);letter-spacing:.09em;text-transform:uppercase}.request-title{margin:8px 0 6px;font-size:24px;letter-spacing:-.035em}.request-desc{margin:0 0 23px;color:var(--muted);font-size:10px;line-height:1.65}.field{display:grid;gap:7px;margin-top:13px}.field[hidden]{display:none}.field label{color:#6e8178;font:850 7px var(--mono);letter-spacing:.08em}.field input{width:100%;height:46px;padding:0 13px;border:1px solid var(--line2);border-radius:9px;background:#fff;color:var(--ink);font-size:10px;outline:none;transition:.15s}.field input:focus{border-color:#6ac9a2;box-shadow:0 0 0 3px rgba(21,150,101,.07)}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.presets{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.preset{padding:7px 9px;border:1px solid var(--line);border-radius:999px;background:#f8fbf9;color:#61736b;font-size:8px;cursor:pointer}.preset:hover{border-color:#a9d7c1;color:#08734f;background:#f0faf5}.request-url{margin-top:20px;border:1px solid var(--line);border-radius:10px;background:#f7faf8;overflow:hidden}.request-url-head{display:flex;justify-content:space-between;gap:12px;padding:9px 11px;border-bottom:1px solid var(--line);color:#7a8b83;font:850 7px var(--mono);letter-spacing:.07em}.request-url code{display:block;padding:12px;color:#17445b;font:800 8px/1.65 var(--mono);word-break:break-all}.request-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.action{min-height:40px;padding:0 12px;border:1px solid var(--line2);border-radius:8px;background:#fff;color:#25463a;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:850;cursor:pointer}.action.primary{border-color:var(--navy);background:var(--navy);color:#fff}.action:hover{transform:translateY(-1px)}.security-note{margin-top:15px;padding:11px 12px;border:1px solid #cbe5d8;border-radius:9px;background:#f0faf5;color:#49695b;font-size:8px;line-height:1.55}.security-note code{font-family:var(--mono);color:#08734f}
+.code-panel{display:flex;flex-direction:column;background:var(--navy);color:#dcebef}.code-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 15px;border-bottom:1px solid rgba(255,255,255,.08)}.format-tabs{display:flex;gap:5px}.format-tab{min-height:31px;padding:0 9px;border:1px solid transparent;border-radius:7px;background:transparent;color:#8ea5af;font:800 8px var(--mono);cursor:pointer}.format-tab.active{border-color:rgba(126,238,181,.18);background:rgba(126,238,181,.08);color:#8ef0bd}.code-copy{min-height:31px;padding:0 9px;border:1px solid rgba(255,255,255,.12);border-radius:7px;background:rgba(255,255,255,.04);color:#b3c9d1;font:800 8px var(--mono);cursor:pointer}.code-copy:hover{color:#fff}.code-meta{display:flex;justify-content:space-between;gap:14px;padding:13px 17px;color:#7f98a4;font:800 7px var(--mono);letter-spacing:.06em;border-bottom:1px solid rgba(255,255,255,.06)}.code-meta b{color:#7eeeb5;font-weight:850}.code-panel pre{flex:1;min-height:310px;margin:0;padding:20px;overflow:auto;white-space:pre-wrap;word-break:break-word;color:#d6e8ed;font:9px/1.78 var(--mono)}.contract-guide{border-top:1px solid rgba(255,255,255,.08);padding:17px}.contract-guide-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.contract-guide-head b{font-size:10px}.contract-guide-head span{color:#7eeeb5;font:850 7px var(--mono);letter-spacing:.07em}.contract-guide ul{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;list-style:none;padding:0;margin:12px 0 0}.contract-guide li{padding:10px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.025)}.contract-guide li b,.contract-guide li span{display:block}.contract-guide li b{color:#d8e8ed;font-size:8px}.contract-guide li span{margin-top:4px;color:#86a0ab;font-size:7px;line-height:1.45}
+.reading{padding:28px 0 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:13px}.section-head h2{margin:7px 0 0;font-size:25px;letter-spacing:-.035em}.section-head p{max-width:640px;margin:0;color:var(--muted);font-size:9px;line-height:1.6}.reading-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.read-card{padding:18px;border:1px solid var(--line);border-radius:12px;background:#fff}.read-card span{color:#16845e;font:900 7px var(--mono);letter-spacing:.08em}.read-card h3{margin:9px 0 6px;font-size:14px}.read-card p{margin:0;color:#687b72;font-size:8px;line-height:1.6}.read-card code{font-family:var(--mono);color:#176086}.coverage-section{margin-top:28px;padding:24px;border:1px solid var(--line);border-radius:15px;background:#fff}.coverage-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-top:15px}.coverage-item{padding:12px;border:1px solid var(--line);border-radius:9px;background:#fbfdfc}.coverage-item b,.coverage-item span,.coverage-item small{display:block}.coverage-item b{font-size:10px}.coverage-item span{margin-top:4px;color:#6d7f76;font-size:7px;line-height:1.45}.coverage-item small{margin-top:9px;color:#08734f;font:850 6px var(--mono);letter-spacing:.06em}.coverage-item.next small{color:#2b78a3}.coverage-item.gated small{color:#8b6816}.coverage-foot{margin-top:13px;color:#74867d;font-size:8px;line-height:1.6}.delivery-section{margin-top:28px}.delivery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.delivery-card{padding:17px;border:1px solid var(--line);border-radius:11px;background:#fff}.delivery-card b{display:block;font-size:11px}.delivery-card span{display:block;margin-top:5px;color:#6e8077;font-size:8px;line-height:1.5}.delivery-card a{display:inline-block;margin-top:11px;color:#08734f;font-size:8px;font-weight:850}.footer{padding:28px 0;background:#06151e;color:#8fa2aa}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-links{display:flex;gap:15px;flex-wrap:wrap;font-size:8px}.footer-meta{font-size:8px}
+@media(max-width:1050px){.explorer-grid{grid-template-columns:1fr}.request-panel{border-right:0;border-bottom:1px solid var(--line)}.coverage-grid{grid-template-columns:repeat(4,1fr)}.delivery-grid{grid-template-columns:1fr 1fr}.workspace-head{align-items:flex-start;flex-direction:column}.workspace-state{justify-content:flex-start}}@media(max-width:760px){.shell{width:min(100% - 26px,1240px)}.top{height:66px}.nav-links,.nav-cta{display:none}.menu{display:block}.nav-links.open{display:flex;position:absolute;top:65px;left:13px;right:13px;z-index:20;flex-direction:column;align-items:stretch;padding:8px;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:var(--shadow)}.nav-links.open a{padding:9px}.workspace{padding:38px 0 58px}.workspace-head h1{font-size:40px}.routebar{padding:8px}.request-panel{padding:18px}.field-grid{grid-template-columns:1fr}.code-panel pre{min-height:250px}.contract-guide ul,.reading-grid{grid-template-columns:1fr}.coverage-grid{grid-template-columns:1fr 1fr}.delivery-grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}}@media(max-width:480px){.coverage-grid{grid-template-columns:1fr}.request-actions .action{flex:1}.workspace-state{gap:5px}}
+</style>
 </head>
 <body>
-  <header class="site-header scrolled">
-    <div class="shell nav">
-      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="42" height="42"><span class="brand-copy"><strong>PropData</strong><small>AUSTRALIA · WORKSPACE</small></span></a>
-      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation"><a href="/">Product</a><a href="/docs">Docs</a><a href="/workspace">Workspace</a><a href="/#coverage">Coverage</a><a href="/#pricing">Pricing</a></nav>
-      <div class="nav-actions"><a class="nav-docs" href="/docs">Docs</a><a class="nav-cta" href="/#pricing">Get API Access</a></div>
-    </div>
-  </header>
+<header class="top"><div class="shell nav"><a class="brand" href="/"><img src="/favicon.svg" alt=""><span><strong>PropData</strong><small>AUSTRALIA · WORKSPACE</small></span></a><button class="menu" id="menu" type="button" aria-label="Open navigation">☰</button><nav class="nav-links" id="nav"><a href="/">Product</a><a href="/docs">Docs</a><a class="active" href="/workspace">Workspace</a><a href="/#pricing">Pricing</a><a href="https://global.proptechusa.ai/">Global</a></nav><a class="nav-cta" href="/#pricing">Get API access</a></div></header>
+<main class="workspace"><div class="shell">
+<section class="workspace-head"><div><div class="eyebrow">PROPDATA AUSTRALIA · API WORKSPACE</div><h1>Build the request. Read the contract.</h1><p>Compose production-safe Australia requests without exposing a key in the browser. Pick a route, set the input, and hand engineering a server-side cURL or Node.js request with the coverage and provenance rules beside it.</p></div><div class="workspace-state"><span class="state-pill">AU PRODUCTION</span><span class="state-pill neutral">16.97M G-NAF</span><span class="state-pill neutral">7.05M+ CADASTRE</span></div></section>
 
-  <main class="au-workspace">
-    <div class="shell workspace-shell">
-      <aside class="workspace-side">
-        <div class="ws-title">Australia Workspace</div>
-        <div class="ws-sub">COUNTRY SCOPE · AU</div>
-        <div class="workspace-tabs" role="tablist" aria-label="Workspace sections">
-          <button class="active" type="button" data-ws-tab="overview">Overview</button>
-          <button type="button" data-ws-tab="builder">Request Builder</button>
-          <button type="button" data-ws-tab="coverage">Coverage</button>
-          <button type="button" data-ws-tab="integration">Integration</button>
-          <button type="button" data-ws-tab="access">Access</button>
-        </div>
-      </aside>
+<section class="explorer" aria-label="Australia API request explorer">
+<div class="routebar" role="tablist" aria-label="Australia API routes"><span class="routebar-label">ROUTE</span><button class="route-btn active" type="button" data-route="property"><span class="verb">GET</span>Property</button><button class="route-btn" type="button" data-route="location"><span class="verb">GET</span>Coordinates</button><button class="route-btn" type="button" data-route="geometry"><span class="verb">GET</span>Geometry</button><button class="route-btn" type="button" data-route="usage"><span class="verb">GET</span>Usage</button><button class="route-btn" type="button" data-route="health"><span class="verb">GET</span>Health</button></div>
+<div class="explorer-grid">
+<div class="request-panel"><div class="panel-kicker">REQUEST</div><h2 class="request-title" id="ws-route-title">Property by address</h2><p class="request-desc" id="ws-route-desc">Resolve an Australian address through the national G-NAF identity layer and attach promoted jurisdiction context.</p>
+<div class="field" data-field="address"><label for="ws-address">AUSTRALIAN ADDRESS</label><input id="ws-address" type="text" value="4 ACT Court, Alexandra Hills QLD 4161" autocomplete="street-address"></div>
+<div class="field-grid"><div class="field" data-field="lat" hidden><label for="ws-lat">LATITUDE</label><input id="ws-lat" type="text" placeholder="-27.47"></div><div class="field" data-field="lng" hidden><label for="ws-lng">LONGITUDE</label><input id="ws-lng" type="text" placeholder="153.03"></div></div>
+<div class="field" data-field="parcel" hidden><label for="ws-parcel">NATIVE PARCEL / LOT / BLOCK IDENTIFIER</label><input id="ws-parcel" type="text" placeholder="Enter a promoted native identifier"></div>
+<div class="presets"><button class="preset" type="button" data-preset="qld-address">Verified QLD address</button><button class="preset" type="button" data-preset="brisbane-point">Brisbane coordinates</button></div>
+<div class="request-url"><div class="request-url-head"><span>REQUEST URL</span><span id="ws-auth-state">X-API-KEY REQUIRED</span></div><code id="ws-request-url"></code></div>
+<div class="request-actions"><button class="action primary" type="button" id="ws-copy-curl">Copy cURL</button><button class="action" type="button" id="ws-copy-node">Copy Node.js</button><a class="action" id="ws-doc-link" href="/docs#quickstart">Route docs</a></div>
+<div class="security-note">Production REST credentials belong only in the <code>x-api-key</code> header from trusted server infrastructure. Generated examples use <code>PROPDATA_API_KEY</code>; this workspace never asks for or stores a real key.</div></div>
+<div class="code-panel"><div class="code-top"><div class="format-tabs"><button class="format-tab active" type="button" data-format="curl">cURL</button><button class="format-tab" type="button" data-format="node">Node.js</button></div><button class="code-copy" type="button" id="ws-copy-code">COPY</button></div><div class="code-meta"><span id="ws-output-label">SERVER-SIDE · GET /v1/property</span><b id="ws-copy-status">READY</b></div><pre id="ws-output" tabindex="0"></pre><div class="contract-guide"><div class="contract-guide-head"><b>Read the response in this order</b><span>AU CONTRACT</span></div><ul id="ws-contract"><li><b>Identity</b><span>Confirm the resolved property and jurisdiction before using enrichment.</span></li><li><b>Coverage</b><span>Read match and layer availability separately from HTTP success.</span></li><li><b>Provenance</b><span>Keep source, dataset and revision attached to downstream facts.</span></li></ul></div></div>
+</div></section>
 
-      <section class="workspace-main">
-        <div class="ws-panel" data-ws-panel="overview">
-          <div class="ws-hero">
-            <div class="eyebrow">PROPDATA AUSTRALIA</div>
-            <h1>Country intelligence cockpit.</h1>
-            <p>Review the verified production graph, compose Australia-scoped API requests and hand safe server-side examples directly to your application team. This workspace never asks you to expose a production API key in browser JavaScript.</p>
-            <div class="ws-metrics">
-              <div class="ws-metric"><b>16.97M</b><span>national G-NAF addresses</span></div>
-              <div class="ws-metric"><b>7.05M+</b><span>live cadastral records</span></div>
-              <div class="ws-metric"><b>4</b><span>cadastral jurisdictions live</span></div>
-              <div class="ws-metric"><b>AU</b><span>stable country scope</span></div>
-            </div>
-          </div>
+<section class="reading"><div class="section-head"><div><div class="eyebrow">RESPONSE DISCIPLINE</div><h2>Three signals matter more than a 200.</h2></div><p>A successful request means the service answered. It does not mean every jurisdiction-native source layer exists for that property.</p></div><div class="reading-grid"><article class="read-card"><span>01 · MATCH</span><h3>What actually resolved?</h3><p>Read <code>match_level</code> and the returned jurisdiction. Address identity, coordinate containment and source-native identifiers are different evidence.</p></article><article class="read-card"><span>02 · COVERAGE</span><h3>How deep can you safely go?</h3><p>Use <code>coverage_status</code> and layer-specific availability. A valid base property can survive while optional cadastral or geometry depth is unavailable.</p></article><article class="read-card"><span>03 · PROVENANCE</span><h3>Where did the fact come from?</h3><p>Preserve source name, dataset and revision context. PropData normalises access without erasing Australian source meaning.</p></article></div></section>
 
-          <div class="ws-card">
-            <h2>Production state</h2>
-            <p>National address identity is complete. Queensland, Victoria, Tasmania and the ACT have certified cadastral baselines. NSW is being rebuilt against a pinned source revision after the public source advanced during its first baseline; WA, SA and NT deeper cadastre remain source-rights gated.</p>
-            <div class="ws-coverage-grid">
-              <div class="ws-coverage-card"><b>Australia national</b><span>G-NAF 2026-08 baseline complete at 16,970,406 records.</span><i class="ws-status">ADDRESS LIVE</i></div>
-              <div class="ws-coverage-card"><b>QLD · VIC · TAS · ACT</b><span>Certified state/territory cadastral baselines with native identifiers and polygon geometry.</span><i class="ws-status">CADASTRE LIVE</i></div>
-              <div class="ws-coverage-card"><b>New South Wales</b><span>Replacement baseline must reconcile to one pinned statewide source revision before promotion.</span><i class="ws-status loading">SOURCE GATED</i></div>
-              <div class="ws-coverage-card"><b>WA · SA · NT</b><span>National addresses live; deeper cadastral layers require authoritative delivery and commercial-use rights.</span><i class="ws-status hold">RIGHTS GATED</i></div>
-            </div>
-          </div>
-        </div>
+<section class="coverage-section"><div class="section-head"><div><div class="eyebrow">CURRENT AUSTRALIA GRAPH</div><h2>Coverage at a glance.</h2></div><p>National G-NAF identity is complete. Deeper cadastre is promoted only where the jurisdiction layer has passed production gates.</p></div><div class="coverage-grid"><article class="coverage-item"><b>National</b><span>16,970,406 G-NAF addresses · 9/9 partitions · GDA2020</span><small>COMPLETE</small></article><article class="coverage-item"><b>QLD</b><span>2,156,480 QSCF lot parcels with promoted geometry.</span><small>LIVE</small></article><article class="coverage-item"><b>VIC</b><span>4,303,714 Vicmap parcels with PFI/UFI semantics retained.</span><small>LIVE</small></article><article class="coverage-item"><b>TAS</b><span>439,539 LIST parcels with PID, volume, folio and UFI context.</span><small>LIVE</small></article><article class="coverage-item"><b>ACT</b><span>152,986 legal blocks with section, division, district and lifecycle context.</span><small>LIVE</small></article><article class="coverage-item next"><b>NSW</b><span>Replacement statewide build remains source-revision gated.</span><small>NEXT</small></article><article class="coverage-item gated"><b>WA · SA · NT</b><span>National address identity live; deeper cadastre remains rights/source gated.</span><small>GATED</small></article></div><div class="coverage-foot">Coverage is a contract, not a marketing claim: unknown or unpromoted source truth stays unavailable rather than being inferred from another jurisdiction.</div></section>
 
-        <div class="ws-panel" data-ws-panel="builder" hidden>
-          <div class="ws-hero"><div class="eyebrow">REQUEST BUILDER</div><h1>Compose an AU request.</h1><p>Generate production-safe server-side examples. Your API key stays in your server environment as <code>PROPDATA_API_KEY</code>; this page does not collect, persist or transmit it.</p></div>
-          <div class="ws-card">
-            <h2>Request</h2>
-            <div class="ws-form-grid">
-              <div class="ws-field full"><label for="ws-endpoint">ROUTE</label><select id="ws-endpoint"><option value="property">Property by address</option><option value="location">Property by coordinates</option><option value="geometry">Parcel geometry</option><option value="usage">Account usage</option><option value="health">System health</option></select></div>
-              <div class="ws-field full" data-field="address"><label for="ws-address">AUSTRALIAN ADDRESS</label><input id="ws-address" type="text" value="4 ACT Court, Alexandra Hills QLD 4161" autocomplete="street-address"></div>
-              <div class="ws-field" data-field="lat" hidden><label for="ws-lat">LATITUDE</label><input id="ws-lat" type="text" placeholder="-27.47"></div>
-              <div class="ws-field" data-field="lng" hidden><label for="ws-lng">LONGITUDE</label><input id="ws-lng" type="text" placeholder="153.03"></div>
-              <div class="ws-field full" data-field="parcel" hidden><label for="ws-parcel">NATIVE PARCEL / LOT IDENTIFIER</label><input id="ws-parcel" type="text" placeholder="Enter the promoted native identifier"></div>
-            </div>
-            <div class="ws-preset-row"><button class="ws-preset" type="button" data-preset="qld-address">Verified QLD G-NAF address</button><button class="ws-preset" type="button" data-preset="location">Coordinate request</button><button class="ws-preset" type="button" data-preset="usage">Usage endpoint</button></div>
-            <div class="ws-actions"><button class="btn btn-primary" type="button" id="ws-copy-curl">Copy cURL</button><button class="btn btn-glass" type="button" id="ws-copy-node">Copy Node.js</button><a class="btn btn-glass" href="/docs#quickstart">Read integration guide</a></div>
-            <div class="ws-key-note">The generated examples reference <code>PROPDATA_API_KEY</code>. Do not replace that placeholder with a real key in client-side code.</div>
-            <div class="ws-output"><div class="ws-output-head"><span id="ws-output-label">cURL</span><span id="ws-copy-status">READY</span></div><pre id="ws-output"></pre></div>
-          </div>
-        </div>
-
-        <div class="ws-panel" data-ws-panel="coverage" hidden>
-          <div class="ws-hero"><div class="eyebrow">COVERAGE CONTROL PLANE</div><h1>Know what is real before you depend on it.</h1><p>Australia separates national address identity from cadastral depth and enrichment. A source appears here as live only after its production baseline is certified.</p></div>
-          <div class="ws-card">
-            <h2>Jurisdiction matrix</h2>
-            <div class="ws-coverage-grid">
-              <div class="ws-coverage-card"><b>National · G-NAF</b><span>16,970,406 geocoded address records. 9/9 source partitions certified.</span><i class="ws-status">BASELINE COMPLETE</i></div>
-              <div class="ws-coverage-card"><b>Queensland · QSCF</b><span>2,156,480 lot parcels plus the state address foundation.</span><i class="ws-status">BASELINE COMPLETE</i></div>
-              <div class="ws-coverage-card"><b>Victoria · Vicmap</b><span>4,303,714 parcel records with PFI/UFI identity retained.</span><i class="ws-status">BASELINE COMPLETE</i></div>
-              <div class="ws-coverage-card"><b>Tasmania · LIST</b><span>439,539 cadastral parcels with PID, volume, folio and UFI semantics.</span><i class="ws-status">BASELINE COMPLETE</i></div>
-              <div class="ws-coverage-card"><b>ACT · ACTGOV BLOCK</b><span>152,986 legal block records with section/division/district context.</span><i class="ws-status">BASELINE COMPLETE</i></div>
-              <div class="ws-coverage-card"><b>New South Wales</b><span>3.35M+ statewide lot scale. Promotion waits on a single pinned source revision and full reconciliation.</span><i class="ws-status loading">NEXT</i></div>
-              <div class="ws-coverage-card"><b>Western Australia</b><span>National G-NAF address identity live. Deeper statewide cadastre is licensing/delivery gated.</span><i class="ws-status hold">CADASTRE HOLD</i></div>
-              <div class="ws-coverage-card"><b>South Australia</b><span>National G-NAF address identity live. Bulk DCDB/cadastral access is rights gated.</span><i class="ws-status hold">CADASTRE HOLD</i></div>
-              <div class="ws-coverage-card"><b>Northern Territory</b><span>National G-NAF address identity live. Authoritative deep-cadastre delivery remains source discovery.</span><i class="ws-status hold">CADASTRE HOLD</i></div>
-            </div>
-          </div>
-          <div class="ws-card"><h2>Coverage rule</h2><p>A valid base match remains valid even when an optional intelligence layer is unavailable. Treat returned <code>match_level</code>, <code>coverage_status</code> and provenance as first-class application state. Unknown is not a negative finding and is never silently replaced by broader or adjacent geography.</p></div>
-        </div>
-
-        <div class="ws-panel" data-ws-panel="integration" hidden>
-          <div class="ws-hero"><div class="eyebrow">INTEGRATION</div><h1>One global edge. Australia-native execution.</h1><p>Use the same PropData account, key-management and usage layer while country-scoping property workflows to <code>AU</code>.</p></div>
-          <div class="ws-card">
-            <h2>Production principles</h2>
-            <div class="ws-coverage-grid">
-              <div class="ws-coverage-card"><b>Server-side credentials</b><span>Send direct REST credentials only in the <code>x-api-key</code> header from trusted server infrastructure.</span></div>
-              <div class="ws-coverage-card"><b>Country scope</b><span>Pass <code>country=AU</code> for Australia property, coordinate and geometry workflows.</span></div>
-              <div class="ws-coverage-card"><b>Fail-open enrichment</b><span>A valid base property result should not become an error only because an optional intelligence layer is unavailable.</span></div>
-              <div class="ws-coverage-card"><b>Fail-closed facts</b><span>Do not infer missing Australian source truth. Preserve explicit unavailable/null states and source provenance.</span></div>
-            </div>
-          </div>
-          <div class="ws-card"><h2>Delivery options</h2><p>REST supports application-level property workflows. OAuth-protected MCP supports compatible AI clients. Bulk, custom endpoints, white-label and workflow-specific response contracts are available for enterprise integrations.</p><div class="ws-actions"><a class="btn btn-primary" href="/docs#delivery">Delivery documentation →</a><a class="btn btn-glass" href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Integration">Discuss architecture</a></div></div>
-        </div>
-
-        <div class="ws-panel" data-ws-panel="access" hidden>
-          <div class="ws-hero"><div class="eyebrow">ACCESS</div><h1>Choose the Australia contract that fits the workload.</h1><p>Self-serve plans bill in Australian dollars. Enterprise contracts can add bulk delivery, custom response design, white-label infrastructure and country-specific support.</p></div>
-          <div class="ws-card">
-            <div class="ws-coverage-grid">
-              <div class="ws-coverage-card"><b>Developer · A$149/mo</b><span>Production Australia REST, workspace, docs and promoted country coverage.</span><div class="ws-actions"><a class="btn btn-checkout" href="https://buy.stripe.com/eVqcN53A256e6xD9ID7wA0d">Choose Developer</a></div></div>
-              <div class="ws-coverage-card"><b>Builder · A$449/mo</b><span>Higher-volume country-native workflows and priority integration support.</span><div class="ws-actions"><a class="btn btn-primary" href="https://buy.stripe.com/14A6oH9Yq6ai7BH0837wA0e">Choose Builder</a></div></div>
-              <div class="ws-coverage-card"><b>Scale · A$1,199/mo</b><span>Scale production workloads and higher-throughput Australia graph access.</span><div class="ws-actions"><a class="btn btn-checkout" href="https://buy.stripe.com/28E5kD9YqgOWg8d9ID7wA0f">Choose Scale</a></div></div>
-              <div class="ws-coverage-card"><b>Enterprise · Custom</b><span>Bulk, MCP, white-label, custom endpoints and integration contracts.</span><div class="ws-actions"><a class="btn btn-enterprise" href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Enterprise">Contact Enterprise</a></div></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="footer"><div class="shell country-footer-links"><a href="/">Australia Product</a><a href="/docs">Developer Docs</a><a href="https://propdata.proptechusa.ai/">PropData Global</a><a href="https://global.proptechusa.ai/">Global Coverage</a><a href="mailto:sales@proptechusa.ai">sales@proptechusa.ai</a></div><div class="shell footer-bottom"><span>© 2026 PropTechUSA.ai · PropData Australia</span><span>Workspace · noindex</span></div></footer>
-  <script src="/site.js" defer></script>
-  <script src="/workspace.js" defer></script>
+<section class="delivery-section"><div class="section-head"><div><div class="eyebrow">DELIVERY</div><h2>Use the graph in the shape your product needs.</h2></div><p>The Workspace is for request composition. Production delivery can extend beyond one-request-at-a-time REST.</p></div><div class="delivery-grid"><article class="delivery-card"><b>REST API</b><span>Server-side Australia property, coordinate, geometry and account workflows.</span><a href="/docs#routes">View routes →</a></article><article class="delivery-card"><b>OAuth MCP</b><span>Customer-safe AI-client access through the separate OAuth-protected PropData MCP flow.</span><a href="/docs#delivery">MCP delivery →</a></article><article class="delivery-card"><b>Bulk & extracts</b><span>Country or jurisdiction delivery when per-request access is not the right operating model.</span><a href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Bulk">Discuss bulk →</a></article><article class="delivery-card"><b>Custom / white-label</b><span>Workflow-specific contracts and embedded PropData infrastructure for enterprise products.</span><a href="mailto:sales@proptechusa.ai?subject=PropData%20Australia%20Custom">Talk to us →</a></article></div></section>
+</div></main>
+<footer class="footer"><div class="shell footer-inner"><div class="footer-links"><a href="/">Australia Product</a><a href="/docs">Developer Docs</a><a href="https://propdata.proptechusa.ai/">PropData Global</a><a href="https://global.proptechusa.ai/">Global Coverage</a></div><div class="footer-meta">© 2026 PropTechUSA.ai · Workspace noindex</div></div></footer>
+<script src="/workspace.js" defer></script>
 </body>
 </html>
