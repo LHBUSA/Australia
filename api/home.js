@@ -21,6 +21,11 @@ module.exports = function handler(req, res) {
 
   for (const [pattern, replacement] of replacements) html = html.replace(pattern, replacement);
 
+  html = html.replace(
+    'sales@proptechusa.ai · au.proptechusa.ai',
+    '<a href="tel:18887843881" style="color:inherit;text-decoration:none;font-weight:700">1-888-784-3881</a> · <a href="mailto:sales@proptechusa.ai" style="color:inherit;text-decoration:none;font-weight:700">sales@proptechusa.ai</a> · au.proptechusa.ai'
+  );
+
   if (!html.includes('property="og:image:type"')) {
     html = html.replace('<meta property="og:image:width" content="600">', '<meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="600">');
   }
